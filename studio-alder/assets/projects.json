@@ -1,0 +1,301 @@
+[
+  {
+    "id": "orchard-house",
+    "name": "Orchard House",
+    "type": "house",
+    "year": 2024,
+    "area": 96,
+    "place": "Fiction Valley",
+    "blurb": "A single-storey family house arranged around a long hall, with the kitchen facing the garden.",
+    "brief": "Two bedrooms, a study and an open living and kitchen space on a narrow plot.",
+    "image": "assets/plans/orchard-house.svg",
+    "rooms": [
+      {
+        "label": "Living",
+        "area": 30,
+        "existing": false
+      },
+      {
+        "label": "Kitchen",
+        "area": 20,
+        "existing": false
+      },
+      {
+        "label": "Hall",
+        "area": 10,
+        "existing": false
+      },
+      {
+        "label": "Bed 1",
+        "area": 12,
+        "existing": false
+      },
+      {
+        "label": "Bed 2",
+        "area": 12,
+        "existing": false
+      },
+      {
+        "label": "Bath",
+        "area": 6,
+        "existing": false
+      },
+      {
+        "label": "Study",
+        "area": 6,
+        "existing": false
+      }
+    ]
+  },
+  {
+    "id": "mill-lane-extension",
+    "name": "Mill Lane Extension",
+    "type": "extension",
+    "year": 2023,
+    "area": 38,
+    "place": "Mill Lane, Example Town",
+    "blurb": "A rear extension that turns a dark kitchen into a bright dining room.",
+    "brief": "Existing house kept as is. New dining room and utility added at the back.",
+    "image": "assets/plans/mill-lane-extension.svg",
+    "rooms": [
+      {
+        "label": "Kitchen",
+        "area": 20,
+        "existing": true
+      },
+      {
+        "label": "Hall",
+        "area": 12,
+        "existing": true
+      },
+      {
+        "label": "Dining",
+        "area": 20,
+        "existing": false
+      },
+      {
+        "label": "Utility",
+        "area": 6,
+        "existing": false
+      },
+      {
+        "label": "WC",
+        "area": 6,
+        "existing": false
+      }
+    ]
+  },
+  {
+    "id": "harbour-loft",
+    "name": "Harbour Loft",
+    "type": "interior",
+    "year": 2024,
+    "area": 74,
+    "place": "Old Harbour",
+    "blurb": "An open loft with one sleeping box and a continuous kitchen wall.",
+    "brief": "Interior layout for a former warehouse unit. One bedroom, one bathroom, open living.",
+    "image": "assets/plans/harbour-loft.svg",
+    "rooms": [
+      {
+        "label": "Open living",
+        "area": 60,
+        "existing": false
+      },
+      {
+        "label": "Bath",
+        "area": 9,
+        "existing": false
+      },
+      {
+        "label": "Sleep",
+        "area": 9,
+        "existing": false
+      },
+      {
+        "label": "Kitchen wall",
+        "area": 26,
+        "existing": false
+      }
+    ]
+  },
+  {
+    "id": "birch-court",
+    "name": "Birch Court",
+    "type": "renovation",
+    "year": 2022,
+    "area": 112,
+    "place": "Birch Court",
+    "blurb": "A terrace house opened up to the garden, with the stair moved to the party wall.",
+    "brief": "Full renovation of a narrow terrace. New plan across two floors; ground floor shown.",
+    "image": "assets/plans/birch-court.svg",
+    "rooms": [
+      {
+        "label": "Hall",
+        "area": 12,
+        "existing": false
+      },
+      {
+        "label": "Stair",
+        "area": 12,
+        "existing": true
+      },
+      {
+        "label": "Living",
+        "area": 32,
+        "existing": false
+      },
+      {
+        "label": "Kitchen",
+        "area": 24,
+        "existing": false
+      }
+    ]
+  },
+  {
+    "id": "fern-cottage",
+    "name": "Fern Cottage",
+    "type": "house",
+    "year": 2025,
+    "area": 58,
+    "place": "Fern Meadow",
+    "blurb": "A compact cottage with a deep porch and one generous room.",
+    "brief": "One-bedroom house with a studio room that can become a second bedroom.",
+    "image": "assets/plans/fern-cottage.svg",
+    "rooms": [
+      {
+        "label": "Living",
+        "area": 28,
+        "existing": false
+      },
+      {
+        "label": "Porch",
+        "area": 12,
+        "existing": false
+      },
+      {
+        "label": "Bed",
+        "area": 12,
+        "existing": false
+      },
+      {
+        "label": "Studio",
+        "area": 9,
+        "existing": false
+      },
+      {
+        "label": "Bath",
+        "area": 9,
+        "existing": false
+      }
+    ]
+  },
+  {
+    "id": "quay-studio",
+    "name": "Quay Studio",
+    "type": "interior",
+    "year": 2023,
+    "area": 120,
+    "place": "The Quay",
+    "blurb": "A small office for eight people, planned around one shared table.",
+    "brief": "Open office, meeting room and a quiet booth for calls.",
+    "image": "assets/plans/quay-studio.svg",
+    "rooms": [
+      {
+        "label": "Work floor",
+        "area": 40,
+        "existing": false
+      },
+      {
+        "label": "Meeting",
+        "area": 20,
+        "existing": false
+      },
+      {
+        "label": "Booth",
+        "area": 9,
+        "existing": false
+      },
+      {
+        "label": "Kitchenette",
+        "area": 15,
+        "existing": false
+      },
+      {
+        "label": "Storage",
+        "area": 12,
+        "existing": false
+      }
+    ]
+  },
+  {
+    "id": "linden-annex",
+    "name": "Linden Annex",
+    "type": "extension",
+    "year": 2025,
+    "area": 24,
+    "place": "Linden Road",
+    "blurb": "A detached garden room for work, with a small bathroom.",
+    "brief": "Single-storey annex for working from home, connected by a covered path.",
+    "image": "assets/plans/linden-annex.svg",
+    "rooms": [
+      {
+        "label": "Studio",
+        "area": 20,
+        "existing": false
+      },
+      {
+        "label": "WC",
+        "area": 4,
+        "existing": false
+      },
+      {
+        "label": "Store",
+        "area": 4,
+        "existing": false
+      }
+    ]
+  },
+  {
+    "id": "rowan-terrace",
+    "name": "Rowan Terrace",
+    "type": "renovation",
+    "year": 2024,
+    "area": 86,
+    "place": "Rowan Terrace",
+    "blurb": "A top-floor flat reorganised so the living room gets both windows.",
+    "brief": "Plan change only: walls moved, bathroom enlarged, kitchen opened to the living room.",
+    "image": "assets/plans/rowan-terrace.svg",
+    "rooms": [
+      {
+        "label": "Living",
+        "area": 24,
+        "existing": false
+      },
+      {
+        "label": "Kitchen",
+        "area": 12,
+        "existing": false
+      },
+      {
+        "label": "Bed 1",
+        "area": 12,
+        "existing": false
+      },
+      {
+        "label": "Bed 2",
+        "area": 12,
+        "existing": false
+      },
+      {
+        "label": "Bath",
+        "area": 6,
+        "existing": false
+      },
+      {
+        "label": "Hall",
+        "area": 6,
+        "existing": false
+      }
+    ]
+  }
+]

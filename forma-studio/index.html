@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forma Studio — Demo landing page for a 3D printing studio</title>
+  <meta name="description" content="Demo project: a responsive landing page for a fictional small 3D printing studio, with a materials selector, a price estimator and a quote form. Not a real business.">
+  <meta name="theme-color" content="#f6f3ee">
+  <meta property="og:title" content="Forma Studio — demo landing page">
+  <meta property="og:description" content="A demo landing page built as a portfolio sample. Fictional company.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <aside class="demo-bar" aria-label="Demo notice">Demo project — fictional company, built as a portfolio sample. Nothing here is sent or sold.</aside>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="Forma Studio, back to top">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect x="3" y="21" width="26" height="6" rx="3" fill="#c2410c"/><rect x="6" y="13" width="20" height="6" rx="3" fill="#e0662f"/><rect x="9" y="5" width="14" height="6" rx="3" fill="#f2a06c"/></svg>
+        <span>Forma Studio</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#services">Services</a>
+        <a href="#materials">Materials</a>
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-small" href="#quote">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">3D printing for makers and small teams</p>
+          <h1>From file to finished part, one layer at a time.</h1>
+          <p class="lead">Prototypes, spare parts and small batches, printed in plastic or resin and checked before they ship. Send a model, get a clear quote.</p>
+          <div class="cta-row">
+            <a class="btn" href="#quote">Get a quote</a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
+          </div>
+          <ul class="hero-points" aria-label="Highlights">
+            <li>Quote after you send the file</li>
+            <li>Five materials, three finishes</li>
+            <li>Typical turnaround 3–5 working days</li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <!-- hero-art:start -->
+          <svg viewBox="0 0 480 420" role="img" focusable="false">
+            <defs><radialGradient id="hglow"><stop offset="0" stop-color="#ffcf9c" stop-opacity=".95"/><stop offset=".4" stop-color="#ff8a3d" stop-opacity=".45"/><stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/></radialGradient><radialGradient id="hsh"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>
+            <rect x="34" y="328" width="400" height="44" rx="8" fill="#2c2a27"/><rect x="34" y="368" width="400" height="12" rx="4" fill="#1b1a17"/><path d="M60 336h348M48 348h372M40 360h388" stroke="#fff" stroke-opacity=".07"/><path d="M74 329l-4 42M114 329l-4 42M154 329l-4 42M194 329l-4 42M234 329l-4 42M274 329l-4 42M314 329l-4 42M354 329l-4 42M394 329l-4 42" stroke="#fff" stroke-opacity=".05"/>
+            <ellipse cx="234" cy="340" rx="88" ry="18" fill="url(#hsh)"/>
+            <path d="M168 185.5 L169.5 182.3 L171.1 179 L172.8 175.8 L174.5 172.6 L176.2 169.4 L177.9 166.1 L179.6 162.9 L181.2 159.7 L182.7 156.5 L184.1 153.2 L185.4 150 L186.5 146.8 L187.4 143.6 L188.3 140.4 L189.2 137.1 L189.7 133.9 L189.8 130.7 L189.7 127.5 L189.3 124.2 L188.8 121 L188.2 117.8 L187.5 114.6 L186.9 111.3 L185.7 108.1 L184.1 104.9 L182.3 101.7 L180.6 98.4 L179 95.2 L178 92M288 185.5 L286.5 182.3 L284.9 179 L283.2 175.8 L281.5 172.6 L279.8 169.4 L278.1 166.1 L276.4 162.9 L274.8 159.7 L273.3 156.5 L271.9 153.2 L270.6 150 L269.5 146.8 L268.6 143.6 L267.7 140.4 L266.8 137.1 L266.3 133.9 L266.2 130.7 L266.3 127.5 L266.7 124.2 L267.2 121 L267.8 117.8 L268.5 114.6 L269.1 111.3 L270.3 108.1 L271.9 104.9 L273.7 101.7 L275.4 98.4 L277 95.2 L278 92" fill="none" stroke="#1b1a17" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="3 6"/>
+            <ellipse cx="228" cy="92" rx="50" ry="13.5" fill="none" stroke="#1b1a17" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="3 6"/>
+            <defs><linearGradient id="hvb" x1="0" x2="1"><stop offset="0" stop-color="#7e300f"/><stop offset=".2" stop-color="#c84c18"/><stop offset=".38" stop-color="#e1794c"/><stop offset=".62" stop-color="#d05019"/><stop offset="1" stop-color="#6d2a0d"/></linearGradient><clipPath id="hvc"><path d="M184 338 L183.4 335.9 L182.8 333.8 L182 331.6 L181.1 329.5 L180.2 327.4 L179.2 325.3 L178.1 323.2 L177 321.1 L175.8 318.9 L174.6 316.8 L173.5 314.7 L172.3 312.6 L171.1 310.5 L170 308.3 L169.3 306.2 L168.6 304.1 L167.8 302 L167 299.9 L166.2 297.8 L165.4 295.6 L164.5 293.5 L163.6 291.4 L162.7 289.3 L161.8 287.2 L160.9 285 L160 282.9 L159.1 280.8 L158.3 278.7 L157.4 276.6 L156.7 274.5 L155.9 272.3 L155.2 270.2 L154.5 268.1 L154 266 L153.4 263.9 L153 261.7 L152.6 259.6 L152.3 257.5 L152.1 255.4 L152 253.3 L151.9 251.1 L151.9 249 L152 246.9 L152.1 244.8 L152.3 242.7 L152.5 240.6 L152.8 238.4 L153.1 236.3 L153.4 234.2 L153.8 232.1 L154.2 230 L154.7 227.8 L155.2 225.7 L155.7 223.6 L156.2 221.5 L156.8 219.4 L157.4 217.3 L158 215.1 L158.6 213 L159.2 210.9 L159.8 208.8 L160.5 206.7 L161.1 204.5 L161.8 202.4 L162.5 200.3 L163.1 198.2 L163.8 196.1 L164.5 194 L165.3 191.8 L166.1 189.7 L167 187.6 L168 185.5 A60 16.2 0 0 1 288 185.5 L288 185.5 L289 187.6 L289.9 189.7 L290.7 191.8 L291.5 194 L292.2 196.1 L292.9 198.2 L293.5 200.3 L294.2 202.4 L294.9 204.5 L295.5 206.7 L296.2 208.8 L296.8 210.9 L297.4 213 L298 215.1 L298.6 217.3 L299.2 219.4 L299.8 221.5 L300.3 223.6 L300.8 225.7 L301.3 227.8 L301.8 230 L302.2 232.1 L302.6 234.2 L302.9 236.3 L303.2 238.4 L303.5 240.6 L303.7 242.7 L303.9 244.8 L304 246.9 L304.1 249 L304.1 251.1 L304 253.3 L303.9 255.4 L303.7 257.5 L303.4 259.6 L303 261.7 L302.6 263.9 L302 266 L301.5 268.1 L300.8 270.2 L300.1 272.3 L299.3 274.5 L298.6 276.6 L297.7 278.7 L296.9 280.8 L296 282.9 L295.1 285 L294.2 287.2 L293.3 289.3 L292.4 291.4 L291.5 293.5 L290.6 295.6 L289.8 297.8 L289 299.9 L288.2 302 L287.4 304.1 L286.7 306.2 L286 308.3 L284.9 310.5 L283.7 312.6 L282.5 314.7 L281.4 316.8 L280.2 318.9 L279 321.1 L277.9 323.2 L276.8 325.3 L275.8 327.4 L274.9 329.5 L274 331.6 L273.2 333.8 L272.6 335.9 L272 338 A44 11.9 0 0 1 184 338Z"/></clipPath><linearGradient id="hvao" x1="0" x2="0" y1="0" y2="1"><stop offset=".8" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></linearGradient></defs><path d="M184 338 L183.4 335.9 L182.8 333.8 L182 331.6 L181.1 329.5 L180.2 327.4 L179.2 325.3 L178.1 323.2 L177 321.1 L175.8 318.9 L174.6 316.8 L173.5 314.7 L172.3 312.6 L171.1 310.5 L170 308.3 L169.3 306.2 L168.6 304.1 L167.8 302 L167 299.9 L166.2 297.8 L165.4 295.6 L164.5 293.5 L163.6 291.4 L162.7 289.3 L161.8 287.2 L160.9 285 L160 282.9 L159.1 280.8 L158.3 278.7 L157.4 276.6 L156.7 274.5 L155.9 272.3 L155.2 270.2 L154.5 268.1 L154 266 L153.4 263.9 L153 261.7 L152.6 259.6 L152.3 257.5 L152.1 255.4 L152 253.3 L151.9 251.1 L151.9 249 L152 246.9 L152.1 244.8 L152.3 242.7 L152.5 240.6 L152.8 238.4 L153.1 236.3 L153.4 234.2 L153.8 232.1 L154.2 230 L154.7 227.8 L155.2 225.7 L155.7 223.6 L156.2 221.5 L156.8 219.4 L157.4 217.3 L158 215.1 L158.6 213 L159.2 210.9 L159.8 208.8 L160.5 206.7 L161.1 204.5 L161.8 202.4 L162.5 200.3 L163.1 198.2 L163.8 196.1 L164.5 194 L165.3 191.8 L166.1 189.7 L167 187.6 L168 185.5 A60 16.2 0 0 1 288 185.5 L288 185.5 L289 187.6 L289.9 189.7 L290.7 191.8 L291.5 194 L292.2 196.1 L292.9 198.2 L293.5 200.3 L294.2 202.4 L294.9 204.5 L295.5 206.7 L296.2 208.8 L296.8 210.9 L297.4 213 L298 215.1 L298.6 217.3 L299.2 219.4 L299.8 221.5 L300.3 223.6 L300.8 225.7 L301.3 227.8 L301.8 230 L302.2 232.1 L302.6 234.2 L302.9 236.3 L303.2 238.4 L303.5 240.6 L303.7 242.7 L303.9 244.8 L304 246.9 L304.1 249 L304.1 251.1 L304 253.3 L303.9 255.4 L303.7 257.5 L303.4 259.6 L303 261.7 L302.6 263.9 L302 266 L301.5 268.1 L300.8 270.2 L300.1 272.3 L299.3 274.5 L298.6 276.6 L297.7 278.7 L296.9 280.8 L296 282.9 L295.1 285 L294.2 287.2 L293.3 289.3 L292.4 291.4 L291.5 293.5 L290.6 295.6 L289.8 297.8 L289 299.9 L288.2 302 L287.4 304.1 L286.7 306.2 L286 308.3 L284.9 310.5 L283.7 312.6 L282.5 314.7 L281.4 316.8 L280.2 318.9 L279 321.1 L277.9 323.2 L276.8 325.3 L275.8 327.4 L274.9 329.5 L274 331.6 L273.2 333.8 L272.6 335.9 L272 338 A44 11.9 0 0 1 184 338Z" fill="url(#hvb)"/><g clip-path="url(#hvc)"><path d="M183.1 334.7A44.9 12.1 0 0 0 272.9 334.7M181.5 330.4A46.5 12.6 0 0 0 274.5 330.4M179.6 326.2A48.4 13.1 0 0 0 276.4 326.2M177.5 322A50.5 13.6 0 0 0 278.5 322M175.1 317.7A52.9 14.3 0 0 0 280.9 317.7M172.8 313.5A55.2 14.9 0 0 0 283.2 313.5M170.4 309.2A57.6 15.5 0 0 0 285.6 309.2M168.9 305A59.1 16 0 0 0 287.1 305M167.4 300.8A60.6 16.4 0 0 0 288.6 300.8M165.7 296.5A62.3 16.8 0 0 0 290.3 296.5M164 292.3A64 17.3 0 0 0 292 292.3M162.2 288.1A65.8 17.8 0 0 0 293.8 288.1M160.4 283.8A67.6 18.3 0 0 0 295.6 283.8M158.6 279.6A69.4 18.7 0 0 0 297.4 279.6M157 275.4A71 19.2 0 0 0 299 275.4M155.5 271.1A72.5 19.6 0 0 0 300.5 271.1M154.2 266.9A73.8 19.9 0 0 0 301.8 266.9M153.1 262.6A74.9 20.2 0 0 0 302.9 262.6M152.4 258.4A75.6 20.4 0 0 0 303.6 258.4M152 254.2A76 20.5 0 0 0 304 254.2M151.9 249.9A76.1 20.5 0 0 0 304.1 249.9M152 245.7A76 20.5 0 0 0 304 245.7M152.4 241.5A75.6 20.4 0 0 0 303.6 241.5M152.9 237.2A75.1 20.3 0 0 0 303.1 237.2M153.6 233A74.4 20.1 0 0 0 302.4 233M154.5 228.7A73.5 19.9 0 0 0 301.5 228.7M155.5 224.5A72.5 19.6 0 0 0 300.5 224.5M156.5 220.3A71.5 19.3 0 0 0 299.5 220.3M157.7 216A70.3 19 0 0 0 298.3 216M158.9 211.8A69.1 18.6 0 0 0 297.1 211.8M160.2 207.6A67.8 18.3 0 0 0 295.8 207.6M161.5 203.3A66.5 17.9 0 0 0 294.5 203.3M162.8 199.1A65.2 17.6 0 0 0 293.2 199.1M164.2 194.9A63.8 17.2 0 0 0 291.8 194.9M165.7 190.6A62.3 16.8 0 0 0 290.3 190.6" fill="none" stroke="#fff" stroke-opacity="0.14300000000000002" stroke-width=".8"/><path d="M182.8 333.8A45.2 12.2 0 0 0 273.2 333.8M181.1 329.5A46.9 12.7 0 0 0 274.9 329.5M179.2 325.3A48.8 13.2 0 0 0 276.8 325.3M177 321.1A51 13.8 0 0 0 279 321.1M174.6 316.8A53.4 14.4 0 0 0 281.4 316.8M172.3 312.6A55.7 15 0 0 0 283.7 312.6M170 308.3A58 15.7 0 0 0 286 308.3M168.6 304.1A59.4 16 0 0 0 287.4 304.1M167 299.9A61 16.5 0 0 0 289 299.9M165.4 295.6A62.6 16.9 0 0 0 290.6 295.6M163.6 291.4A64.4 17.4 0 0 0 292.4 291.4M161.8 287.2A66.2 17.9 0 0 0 294.2 287.2M160 282.9A68 18.4 0 0 0 296 282.9M158.3 278.7A69.7 18.8 0 0 0 297.7 278.7M156.7 274.5A71.3 19.3 0 0 0 299.3 274.5M155.2 270.2A72.8 19.7 0 0 0 300.8 270.2M154 266A74 20 0 0 0 302 266M153 261.7A75 20.3 0 0 0 303 261.7M152.3 257.5A75.7 20.4 0 0 0 303.7 257.5M152 253.3A76 20.5 0 0 0 304 253.3M151.9 249A76.1 20.5 0 0 0 304.1 249M152.1 244.8A75.9 20.5 0 0 0 303.9 244.8M152.5 240.6A75.5 20.4 0 0 0 303.5 240.6M153.1 236.3A74.9 20.2 0 0 0 302.9 236.3M153.8 232.1A74.2 20 0 0 0 302.2 232.1M154.7 227.8A73.3 19.8 0 0 0 301.3 227.8M155.7 223.6A72.3 19.5 0 0 0 300.3 223.6M156.8 219.4A71.2 19.2 0 0 0 299.2 219.4M158 215.1A70 18.9 0 0 0 298 215.1M159.2 210.9A68.8 18.6 0 0 0 296.8 210.9M160.5 206.7A67.5 18.2 0 0 0 295.5 206.7M161.8 202.4A66.2 17.9 0 0 0 294.2 202.4M163.1 198.2A64.9 17.5 0 0 0 292.9 198.2M164.5 194A63.5 17.2 0 0 0 291.5 194M166.1 189.7A61.9 16.7 0 0 0 289.9 189.7" fill="none" stroke="#57210a" stroke-opacity="0.26" stroke-width=".9"/><rect x="0" y="185.5" width="2000" height="153.5" fill="url(#hvao)"/></g>
+            <ellipse cx="228" cy="185.5" rx="60" ry="16.2" fill="#f08a52"/><ellipse cx="228" cy="185.5" rx="56" ry="15.1" fill="#7d2a08"/>
+            <path class="fresh" d="M168 185.5A60 16.2 0 0 0 279.2 194" fill="none" stroke="#ffd2a8" stroke-width="2.4" stroke-linecap="round"/>
+            <g class="printhead"><rect x="18" y="16" width="432" height="16" rx="8" fill="#2c2a27"/><rect x="18" y="16" width="432" height="5" rx="2.5" fill="#fff" opacity=".08"/>
+<g class="carriage"><g transform="translate(279.2 0)"><rect x="-38" y="4" width="76" height="62" rx="10" fill="#33312d"/><rect x="-38" y="4" width="76" height="10" rx="5" fill="#fff" opacity=".07"/><circle cx="0" cy="37" r="16" fill="#1f1e1b"/><circle cx="0" cy="37" r="16" fill="none" stroke="#fff" stroke-opacity=".1"/><path d="M0 24v26M-13 37h26M-9 28l18 18M9 28l-18 18" stroke="#4a4741" stroke-width="3" stroke-linecap="round"/><rect x="-7" y="66" width="14" height="110" fill="#46433d"/><rect x="-7" y="66" width="4" height="110" fill="#fff" opacity=".08"/><path d="M-9 176h18l-6 13h-6z" fill="#c9a44c"/><path d="M-4 189h8l-2 4h-4z" fill="#a8842f"/>
+<circle class="glow" cx="0" cy="194" r="12" fill="url(#hglow)"/></g></g></g>
+          </svg>
+          <!-- hero-art:end -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <p class="section-lead">Four steps, and you stay informed at each one.</p>
+        <ol class="steps">
+          <li><span class="step-num">1</span><h3>Send your model</h3><p>STL, 3MF or STEP. No model yet? Send a sketch with sizes and we will say what is possible.</p></li>
+          <li><span class="step-num">2</span><h3>Get a quote</h3><p>You receive a fixed price, material suggestion and delivery date. No surprises later.</p></li>
+          <li><span class="step-num">3</span><h3>We print and check</h3><p>Every part is measured against the model and inspected for defects before packing.</p></li>
+          <li><span class="step-num">4</span><h3>Delivery</h3><p>Parts are packed to survive the trip. Tracking number comes by email.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="services">
+      <div class="wrap">
+        <h2>What we print</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Prototypes</h3>
+            <p>Test fit, form and function before you pay for tooling. One part or ten, fast revisions.</p>
+            <p class="card-meta">From 1 piece · 2–3 days</p>
+          </article>
+          <article class="card">
+            <h3>Small batches</h3>
+            <p>10 to 200 identical parts with consistent quality, numbered and packed in bags or boxes.</p>
+            <p class="card-meta">10–200 pieces · 5–8 days</p>
+          </article>
+          <article class="card">
+            <h3>Spare and custom parts</h3>
+            <p>Brackets, knobs, covers, holders: the plastic bit that is no longer sold. Send a photo with sizes.</p>
+            <p class="card-meta">Model help available</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="materials">
+      <div class="wrap">
+        <h2>Choose a material</h2>
+        <p class="section-lead">Pick one to see what it is good for.</p>
+        <div class="tabs" data-tabs>
+          <div class="tablist" role="tablist" aria-label="Materials">
+            <button role="tab" id="tab-pla" aria-controls="panel-pla" aria-selected="true" type="button">PLA</button>
+            <button role="tab" id="tab-petg" aria-controls="panel-petg" aria-selected="false" tabindex="-1" type="button">PETG</button>
+            <button role="tab" id="tab-nylon" aria-controls="panel-nylon" aria-selected="false" tabindex="-1" type="button">Nylon</button>
+            <button role="tab" id="tab-resin" aria-controls="panel-resin" aria-selected="false" tabindex="-1" type="button">Resin</button>
+            <button role="tab" id="tab-tpu" aria-controls="panel-tpu" aria-selected="false" tabindex="-1" type="button">TPU</button>
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-pla" aria-labelledby="tab-pla">
+            <div class="panel-text">
+              <h3>PLA — for looks and fit tests</h3>
+              <p>Easy to print, crisp edges, many colours. Not for heat above about 55 °C or for parts outdoors in summer.</p>
+              <dl class="specs"><div><dt>Strength</dt><dd><span class="meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Medium</dd></div><div><dt>Detail</dt><dd><span class="meter" data-level="4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>High</dd></div><div><dt>Heat resistance</dt><dd><span class="meter" data-level="1" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Low</dd></div><div><dt>Flexibility</dt><dd><span class="meter" data-level="0" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>None</dd></div></dl>
+            </div>
+            <img class="panel-img" src="assets/art/vase-pla.svg" alt="" width="480" height="360" loading="lazy" decoding="async">
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-petg" aria-labelledby="tab-petg" hidden>
+            <div class="panel-text">
+              <h3>PETG — the everyday workhorse</h3>
+              <p>Tougher than PLA, handles light outdoor use and splashes. A good default for functional parts.</p>
+              <dl class="specs"><div><dt>Strength</dt><dd><span class="meter" data-level="4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>High</dd></div><div><dt>Detail</dt><dd><span class="meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Medium</dd></div><div><dt>Heat resistance</dt><dd><span class="meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Medium</dd></div><div><dt>Flexibility</dt><dd><span class="meter" data-level="1" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Low</dd></div></dl>
+            </div>
+            <img class="panel-img" src="assets/art/bracket-petg.svg" alt="" width="480" height="360" loading="lazy" decoding="async">
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-nylon" aria-labelledby="tab-nylon" hidden>
+            <div class="panel-text">
+              <h3>Nylon — for wear and load</h3>
+              <p>Gears, hinges and clips that must take a beating. Slightly rough surface, needs dry storage.</p>
+              <dl class="specs"><div><dt>Strength</dt><dd><span class="meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Very high</dd></div><div><dt>Detail</dt><dd><span class="meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Medium</dd></div><div><dt>Heat resistance</dt><dd><span class="meter" data-level="4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>High</dd></div><div><dt>Flexibility</dt><dd><span class="meter" data-level="2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Low–medium</dd></div></dl>
+            </div>
+            <img class="panel-img" src="assets/art/gear-nylon.svg" alt="" width="480" height="360" loading="lazy" decoding="async">
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-resin" aria-labelledby="tab-resin" hidden>
+            <div class="panel-text">
+              <h3>Resin — for fine detail</h3>
+              <p>Smooth surfaces for miniatures, jewellery masters and dental-style models. More brittle than plastics.</p>
+              <dl class="specs"><div><dt>Strength</dt><dd><span class="meter" data-level="2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Low–medium</dd></div><div><dt>Detail</dt><dd><span class="meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Very high</dd></div><div><dt>Heat resistance</dt><dd><span class="meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Medium</dd></div><div><dt>Flexibility</dt><dd><span class="meter" data-level="0" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>None</dd></div></dl>
+            </div>
+            <img class="panel-img" src="assets/art/miniature-resin.svg" alt="" width="480" height="360" loading="lazy" decoding="async">
+          </div>
+          <div class="tabpanel" role="tabpanel" id="panel-tpu" aria-labelledby="tab-tpu" hidden>
+            <div class="panel-text">
+              <h3>TPU — soft and bendable</h3>
+              <p>Gaskets, grips, bumpers and cases. Prints slowly, so small details cost more.</p>
+              <dl class="specs"><div><dt>Strength</dt><dd><span class="meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Medium</dd></div><div><dt>Detail</dt><dd><span class="meter" data-level="2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Low–medium</dd></div><div><dt>Heat resistance</dt><dd><span class="meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Medium</dd></div><div><dt>Flexibility</dt><dd><span class="meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Very high</dd></div></dl>
+            </div>
+            <img class="panel-img" src="assets/art/grip-tpu.svg" alt="" width="480" height="360" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="work">
+      <div class="wrap">
+        <h2>Sample parts</h2>
+        <p class="section-lead">Illustrations for this demo. No real client work is shown.</p>
+        <ul class="gallery">
+          <li><figure><img src="assets/art/vase-pla.svg" alt="Illustration: Orange vase printed in PLA, with visible print layers" width="480" height="360" loading="lazy" decoding="async"><figcaption>Layered vase · PLA</figcaption></figure></li>
+          <li><figure><img src="assets/art/gear-nylon.svg" alt="Illustration: Green nylon drive gear with a raised hub" width="480" height="360" loading="lazy" decoding="async"><figcaption>Drive gear · Nylon</figcaption></figure></li>
+          <li><figure><img src="assets/art/bracket-petg.svg" alt="Illustration: Violet PETG angle bracket with three screw holes" width="480" height="360" loading="lazy" decoding="async"><figcaption>Wall bracket · PETG</figcaption></figure></li>
+          <li><figure><img src="assets/art/miniature-resin.svg" alt="Illustration: Glossy dark red resin game piece" width="480" height="360" loading="lazy" decoding="async"><figcaption>Miniature · Resin</figcaption></figure></li>
+          <li><figure><img src="assets/art/grip-tpu.svg" alt="Illustration: Ribbed blue TPU grip sleeve" width="480" height="360" loading="lazy" decoding="async"><figcaption>Grip sleeve · TPU</figcaption></figure></li>
+          <li><figure><img src="assets/art/organiser-pla.svg" alt="Illustration: Yellow PLA desk organiser made of three hexagonal cups" width="480" height="360" loading="lazy" decoding="async"><figcaption>Desk organiser · PLA</figcaption></figure></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <h2>Pricing, in plain numbers</h2>
+        <p class="section-lead">Demo prices. A final quote always depends on your file.</p>
+        <div class="plans">
+          <article class="plan">
+            <h3>Single part</h3>
+            <p class="price"><span>from</span> $12</p>
+            <ul><li>One part, any material</li><li>Basic cleanup</li><li>Quote in 1 working day</li></ul>
+            <a class="btn btn-ghost" href="#quote">Ask for a quote</a>
+          </article>
+          <article class="plan plan-featured">
+            <p class="badge">Most requested</p>
+            <h3>Prototype set</h3>
+            <p class="price"><span>from</span> $45</p>
+            <ul><li>Up to 5 parts or revisions</li><li>Material advice included</li><li>Measured against your model</li></ul>
+            <a class="btn" href="#quote">Ask for a quote</a>
+          </article>
+          <article class="plan">
+            <h3>Small batch</h3>
+            <p class="price"><span>from</span> $4 <small>per part</small></p>
+            <ul><li>10–200 identical parts</li><li>Sample approved before the run</li><li>Counted and packed</li></ul>
+            <a class="btn btn-ghost" href="#quote">Ask for a quote</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="faq">
+      <div class="wrap narrow">
+        <h2>Questions people ask</h2>
+        <div class="faq">
+          <details><summary>Which file formats do you accept?</summary><p>STL, 3MF and STEP. If you only have a drawing or a photo with sizes, tell us in the form and we will see what can be done.</p></details>
+          <details><summary>How accurate are the parts?</summary><p>Typical tolerance is about ±0.2 mm on FDM plastics and ±0.1 mm on resin. We tell you before printing if a feature is too tight to hold.</p></details>
+          <details><summary>Can you keep my design private?</summary><p>Yes. Files are used for your order only and deleted after delivery unless you ask us to keep them.</p></details>
+          <details><summary>What if a part fails?</summary><p>If the fault is ours, we reprint it at no cost. If the design has a problem, we explain what to change.</p></details>
+          <details><summary>Is this a real company?</summary><p>No. Forma Studio is a fictional business used for a web design portfolio demo.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quote">
+      <div class="wrap quote-grid">
+        <div>
+          <h2>Get a quote</h2>
+          <p class="section-lead">Tell us what you need. This is a demo, so the form checks your input but does not send anything.</p>
+          <div class="estimator" aria-labelledby="est-title">
+            <h3 id="est-title">Quick price estimate</h3>
+            <div class="est-fields">
+              <label>Material
+                <select id="est-material">
+                  <option value="1.0">PLA</option><option value="1.25">PETG</option><option value="2.2">Nylon</option><option value="2.6">Resin</option><option value="1.8">TPU</option>
+                </select>
+              </label>
+              <label>Size (longest side, mm)
+                <input id="est-size" type="number" min="10" max="250" value="60" inputmode="numeric">
+              </label>
+              <label>Quantity
+                <input id="est-qty" type="number" min="1" max="200" value="1" inputmode="numeric">
+              </label>
+            </div>
+            <p class="est-result" id="est-result" aria-live="polite"></p>
+            <p class="est-note">Rough demo formula, not a real price list.</p>
+          </div>
+        </div>
+        <form id="quote-form" class="form" novalidate>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+            <p class="error" id="e-name" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+            <p class="error" id="e-email" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-type">What do you need?</label>
+            <select id="f-type" name="type" required>
+              <option value="">Choose one</option>
+              <option>Prototype</option><option>Small batch</option><option>Spare or custom part</option><option>Not sure yet</option>
+            </select>
+            <p class="error" id="e-type" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-msg">Details <span class="opt">(optional)</span></label>
+            <textarea id="f-msg" name="message" rows="4" maxlength="600"></textarea>
+          </div>
+          <button class="btn" type="submit">Check my request</button>
+          <p class="form-status" id="form-status" role="status" tabindex="-1" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p><strong>Forma Studio</strong> — a fictional business. Demo landing page for a web development portfolio.</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

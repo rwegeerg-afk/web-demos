@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Studio Alder (demo)</title>
+<meta name="description" content="Eight demo projects drawn as floor plans, with filters by type. Fictional studio, illustrations only.">
+<meta name="theme-color" content="#eef0ee">
+<meta property="og:title" content="Projects — Studio Alder (demo)">
+<meta property="og:description" content="Eight demo projects drawn as floor plans, with filters by type. Fictional studio, illustrations only.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/schibsted-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<aside class="demo-bar" aria-label="Demo notice">DEMO PROJECT · fictional studio, built as a web development portfolio sample · no real enquiries are received</aside>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html" aria-label="Studio Alder, home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M2 16 9 2l7 14M5 11h8" fill="none" stroke="#d6ef3f" stroke-width="2"/></svg></span>Studio Alder</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><i aria-hidden="true"></i></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-small" href="contact.html#enquiry">Book a consultation</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="section">
+  <div class="wrap">
+    <p class="label"><b>01</b>Projects</p>
+    <h1>Eight plans from the demo collection.</h1>
+    <p class="lead">Illustrations drawn for this demo. Open a project to see rooms, size and the brief.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="filters" role="group" aria-label="Filter projects by type">
+      <button class="chip" type="button" data-type="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-type="house" aria-pressed="false">New house</button>
+      <button class="chip" type="button" data-type="extension" aria-pressed="false">Extension</button>
+      <button class="chip" type="button" data-type="interior" aria-pressed="false">Interior</button>
+      <button class="chip" type="button" data-type="renovation" aria-pressed="false">Renovation</button>
+      <span class="count" id="project-count" role="status" aria-live="polite">Loading projects…</span>
+    </div>
+    <ul class="cards" id="project-grid" aria-busy="true" style="list-style:none;padding:0;margin:0">
+      <!-- Placeholders keep the layout stable while assets/projects.json loads; app.js replaces them. -->
+      <li class="skel" aria-hidden="true"><span class="skel-img"></span><span class="skel-body"><i></i><i></i><i></i></span></li>
+      <li class="skel" aria-hidden="true"><span class="skel-img"></span><span class="skel-body"><i></i><i></i><i></i></span></li>
+      <li class="skel" aria-hidden="true"><span class="skel-img"></span><span class="skel-body"><i></i><i></i><i></i></span></li>
+      <li class="skel" aria-hidden="true"><span class="skel-img"></span><span class="skel-body"><i></i><i></i><i></i></span></li>
+      <li class="skel" aria-hidden="true"><span class="skel-img"></span><span class="skel-body"><i></i><i></i><i></i></span></li>
+      <li class="skel" aria-hidden="true"><span class="skel-img"></span><span class="skel-body"><i></i><i></i><i></i></span></li>
+      <li class="skel" aria-hidden="true"><span class="skel-img"></span><span class="skel-body"><i></i><i></i><i></i></span></li>
+      <li class="skel" aria-hidden="true"><span class="skel-img"></span><span class="skel-body"><i></i><i></i><i></i></span></li>
+    </ul>
+    <p class="empty" id="project-empty" hidden>No projects of this type yet.</p>
+  </div>
+</section>
+
+<dialog class="detail" id="project-dialog" aria-labelledby="d-title">
+  <button class="close" type="button" aria-label="Close project details">×</button>
+  <div class="detail-grid">
+    <img id="d-img" src="assets/plans/orchard-house.svg" alt="" width="560" height="420">
+    <div class="detail-body">
+      <p class="tag" id="d-tag"></p>
+      <h2 id="d-title"></h2>
+      <p id="d-blurb"></p>
+      <dl>
+        <dt>Brief</dt><dd id="d-brief"></dd>
+        <dt>Area</dt><dd id="d-area"></dd>
+        <dt>Place</dt><dd id="d-place"></dd>
+        <dt>Rooms</dt><dd id="d-rooms"></dd>
+      </dl>
+      <a class="btn arrow" href="contact.html#enquiry">Ask about a similar project</a>
+    </div>
+  </div>
+</dialog>
+
+<section class="cta-band"><div class="wrap"><h2>Have a plot or a flat in mind?</h2><a class="btn arrow" href="contact.html#enquiry">Book a consultation</a></div></section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><h2>Studio Alder</h2><p>A fictional architecture and interiors studio. This website is a demonstration of front-end work, not a real business.</p></div>
+      <div><h2>Pages</h2><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h2>Studio</h2><ul><li>12 Example Street, Sample City</li><li>hello@studioalder.example</li><li>Mon–Fri, 9:00–17:00</li></ul></div>
+    </div>
+    <p class="small">All drawings are generated illustrations. Fonts: Schibsted Grotesk and JetBrains Mono (SIL OFL). Names, address and e-mail are fictional.</p>
+  </div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

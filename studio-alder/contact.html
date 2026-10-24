@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Studio Alder (demo)</title>
+<meta name="description" content="Contact page with a validated enquiry form. This is a demo: nothing is sent.">
+<meta name="theme-color" content="#eef0ee">
+<meta property="og:title" content="Contact — Studio Alder (demo)">
+<meta property="og:description" content="Contact page with a validated enquiry form. This is a demo: nothing is sent.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/schibsted-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<aside class="demo-bar" aria-label="Demo notice">DEMO PROJECT · fictional studio, built as a web development portfolio sample · no real enquiries are received</aside>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html" aria-label="Studio Alder, home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M2 16 9 2l7 14M5 11h8" fill="none" stroke="#d6ef3f" stroke-width="2"/></svg></span>Studio Alder</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><i aria-hidden="true"></i></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a class="btn btn-small" href="contact.html#enquiry">Book a consultation</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="section">
+  <div class="wrap">
+    <p class="label"><b>01</b>Contact</p>
+    <h1>Start with a conversation.</h1>
+    <p class="lead">Tell us what you are planning. This is a demo, so the form checks your input but does not send anything.</p>
+  </div>
+</section>
+
+<section class="section" id="enquiry">
+  <div class="wrap contact-grid">
+    <form id="contact-form" class="form" novalidate>
+      <div class="two">
+        <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" type="text" autocomplete="name" required><p class="error" id="e-name" hidden></p></div>
+        <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required><p class="error" id="e-email" hidden></p></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="c-type">Project type</label>
+          <select id="c-type" name="type" required><option value="">Choose one</option><option>New house</option><option>Extension</option><option>Renovation</option><option>Interior layout</option><option>Not sure yet</option></select>
+          <p class="error" id="e-type" hidden></p></div>
+        <div class="field"><label for="c-where">Location <span style="text-transform:none;letter-spacing:0">(optional)</span></label><input id="c-where" name="where" type="text" autocomplete="address-level2"></div>
+      </div>
+      <div class="field"><label for="c-message">About your project</label><textarea id="c-message" name="message" required maxlength="1200"></textarea><p class="error" id="e-message" hidden></p></div>
+      <button class="btn" type="submit">Check my enquiry</button>
+      <p class="form-status" id="form-status" role="status" tabindex="-1" hidden></p>
+    </form>
+    <div class="info">
+      <h2 style="font-size:1.6rem">Studio</h2>
+      <dl>
+        <div><dt>Address</dt><dd>12 Example Street<br>Sample City</dd></div>
+        <div><dt>Email</dt><dd>hello@studioalder.example</dd></div>
+        <div><dt>Hours</dt><dd>Mon–Fri, 9:00–17:00</dd></div>
+      </dl>
+      <h2 style="font-size:1.6rem;margin-top:2rem">What happens next</h2>
+      <ol class="steps">
+        <li>We read your message and reply within two working days.</li>
+        <li>A 30-minute call to understand the plot and the budget.</li>
+        <li>A written proposal with a fixed fee for the first phase.</li>
+      </ol>
+      <p class="tag" style="margin-top:1.5rem">All details on this page are fictional.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><h2>Studio Alder</h2><p>A fictional architecture and interiors studio. This website is a demonstration of front-end work, not a real business.</p></div>
+      <div><h2>Pages</h2><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h2>Studio</h2><ul><li>12 Example Street, Sample City</li><li>hello@studioalder.example</li><li>Mon–Fri, 9:00–17:00</li></ul></div>
+    </div>
+    <p class="small">All drawings are generated illustrations. Fonts: Schibsted Grotesk and JetBrains Mono (SIL OFL). Names, address and e-mail are fictional.</p>
+  </div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

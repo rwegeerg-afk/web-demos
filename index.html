@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web demos — three sample projects</title>
+<meta name="description" content="Three demo web projects: a landing page, a five-page business site and a React + TypeScript dashboard. Samples built for fictional businesses, not client work.">
+<style>
+:root{--bg:#faf8f4;--ink:#1d1b18;--muted:#5d5851;--card:#fff;--line:#e4dfd6;--accent:#b4491f;--accent-ink:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#16140f;--ink:#f1ede5;--muted:#b3ada1;--card:#1f1c16;--line:#34302a;--accent:#e08a5f;--accent-ink:#1d1b18}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.banner{background:var(--ink);color:var(--bg);font-size:.9rem;padding:.55rem 0}
+.banner p{margin:0}
+header.hero{padding:56px 0 28px}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:0 0 .6rem;letter-spacing:-.02em}
+.lead{max-width:60ch;color:var(--muted);font-size:1.1rem;margin:0}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));padding:20px 0 48px;margin:0;list-style:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+.body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.tag{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+h2{font-size:1.3rem;margin:0}
+.body p{margin:0;color:var(--muted)}
+.stack{font-size:.88rem}
+.checks{font-size:.85rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:.6rem;margin-top:auto}
+.btn{display:inline-block;align-self:flex-start;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:.7rem 1.1rem;min-height:44px;border-radius:8px}
+.btn:hover{filter:brightness(1.08)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:.92rem}
+footer p{margin:.3rem 0;max-width:70ch}
+</style>
+</head>
+<body>
+<div class="banner"><div class="wrap"><p><strong>Demo projects.</strong> These are samples built for fictional businesses. They are not client work.</p></div></div>
+<header class="hero">
+  <div class="wrap">
+    <h1>Three demo web projects</h1>
+    <p class="lead">A landing page, a five-page company site and a React dashboard. Each one is tested in Chrome, Firefox and WebKit, and checked for accessibility and speed. Open them, click around, resize the window.</p>
+  </div>
+</header>
+<main class="wrap">
+  <ul class="grid">
+    <li class="card">
+      <img src="img/forma-studio.png" width="1440" height="900" alt="Forma Studio landing page: a warm paper-coloured first screen with a half-printed vase illustration" loading="lazy">
+      <div class="body">
+        <span class="tag">Landing page</span>
+        <h2>Forma Studio</h2>
+        <p>One-page site for a fictional 3D printing studio: original illustrations, material selector, price estimator, validated quote form.</p>
+        <span class="stack">HTML · CSS · JavaScript</span>
+        <span class="checks">33 functional checks in 3 browsers · axe: 0 issues · Lighthouse mobile 99 / 100 / 100 / 100</span>
+        <a class="btn" href="forma-studio/">Open the demo</a>
+      </div>
+    </li>
+    <li class="card">
+      <img src="img/studio-alder.png" width="1440" height="900" alt="Studio Alder home page: a Swiss-style architectural drawing layout with a project grid" loading="lazy">
+      <div class="body">
+        <span class="tag">Business site, 5 pages</span>
+        <h2>Studio Alder</h2>
+        <p>Website for a fictional architecture studio: one design system across pages, project filters, accessible dialog with deep links, contact form.</p>
+        <span class="stack">HTML · CSS · JavaScript</span>
+        <span class="checks">34 functional checks in 3 browsers · 0 problems across 75 page/browser/width combinations · Lighthouse 99–100</span>
+        <a class="btn" href="studio-alder/">Open the demo</a>
+      </div>
+    </li>
+    <li class="card">
+      <img src="img/larkspur-orders.png" width="1440" height="900" alt="Larkspur Orders dashboard overview with key figures, a revenue chart and an orders-by-status list" loading="lazy">
+      <div class="body">
+        <span class="tag">Web app</span>
+        <h2>Larkspur Orders</h2>
+        <p>Order dashboard for a fictional coffee roastery: filters and sorting kept in the URL, pagination, CSV export, chart, forms, dark theme, loading and error states.</p>
+        <span class="stack">React 19 · TypeScript · Vite · Tailwind CSS 4</span>
+        <span class="checks">23 unit tests · 45 end-to-end checks in 3 browsers · axe: 0 issues · Lighthouse desktop 100 across the board</span>
+        <a class="btn" href="larkspur-orders/">Open the demo</a>
+      </div>
+    </li>
+  </ul>
+</main>
+<footer>
+  <div class="wrap">
+    <p>All three are demonstration projects. Companies, people, prices and data are invented, forms send nothing, and the dashboard's "server" runs inside your browser.</p>
+    <p>Fonts are open source (SIL OFL); licence files sit next to the font files.</p>
+  </div>
+</footer>
+</body>
+</html>
