@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pressa Juice Studio</title>
+<meta name="description" content="Cold-pressed juice from whole fruit, bottled in glass and delivered before 9:00 in Lisbon. A concept site for a fictional juice studio.">
+<meta property="og:title" content="Pressa Juice Studio">
+<meta property="og:description" content="Squeezed this morning. Four cold-pressed recipes and a weekly box.">
+<meta name="theme-color" content="#FF6B1A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%232B0F2A'/%3E%3Ccircle cx='16' cy='16' r='12' fill='%23FF6B1A'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23FFD23F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600;700;800;900&family=Shrikhand&display=swap">
+</head>
+<body>
+<style>
+/* Layout: colour-blocked market poster. Every section is one fruit's colour; oversized type collides with an illustrated bottle. */
+:root {
+  color-scheme: light;
+  --tangerine: #FF6B1A;
+  --lemon: #FFD23F;
+  --pink: #FF5C93;
+  --kiwi: #1FB46B;
+  --berry: #2B0F2A;
+  --paper: #FFFBF2;
+  --white: #FFFFFF;
+  --berry-soft: rgba(43, 15, 42, .76);
+  --berry-line: rgba(43, 15, 42, .16);
+  --juice: var(--tangerine);
+  --stage: var(--tangerine);
+  --display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --script: "Shrikhand", "Georgia", serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "DM Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --radius: 28px;
+  --gutter: clamp(16px, 4vw, 56px);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--berry); font: 400 17px/1.55 var(--body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img, svg { max-width: 100%; }
+a { color: inherit; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--berry); outline-offset: 3px; border-radius: 8px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 800; letter-spacing: -.035em; line-height: .92; margin: 0; text-wrap: balance; font-variation-settings: "wdth" 82, "opsz" 96; }
+p { margin: 0; }
+.wrap { max-width: 1320px; margin: 0 auto; padding-inline: var(--gutter); }
+.label { font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.script { font-family: var(--script); font-weight: 400; letter-spacing: 0; }
+
+/* ---------- nav ---------- */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; background: var(--stage); transition: background .6s cubic-bezier(.2,.8,.2,1); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.logo { font: 400 30px/1 var(--script); text-decoration: none; display: flex; align-items: baseline; gap: 6px; }
+.logo small { font: 500 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.nav ul { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; font-weight: 600; font-size: 15px; }
+.nav ul a { text-decoration: none; }
+.nav ul a:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.box-btn { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; flex: none; border: 2px solid var(--berry); background: var(--berry); color: var(--paper); border-radius: 999px; padding: 9px 16px 9px 14px; font-weight: 700; font-size: 15px; }
+.box-btn b { display: inline-grid; place-items: center; min-width: 24px; height: 24px; border-radius: 12px; background: var(--lemon); color: var(--berry); font-size: 13px; padding: 0 6px; font-variant-numeric: tabular-nums; }
+.box-btn.bump { animation: bump .45s cubic-bezier(.3,1.6,.5,1); }
+@keyframes bump { 40% { transform: scale(1.12); } }
+
+/* ---------- hero ---------- */
+.hero { background: var(--stage); transition: background .6s cubic-bezier(.2,.8,.2,1); position: relative; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 24px; align-items: center; padding-block: 28px 0; position: relative; z-index: 2; }
+.hero-copy { padding-block: 24px 56px; min-width: 0; }
+.hero-copy .label { display: inline-flex; align-items: center; gap: 10px; background: var(--paper); border-radius: 999px; padding: 9px 14px; }
+.hero-copy .label i { width: 8px; height: 8px; border-radius: 50%; background: var(--kiwi); box-shadow: 0 0 0 4px rgba(31,180,107,.22); }
+.hero h1 { font-size: clamp(64px, 10.4vw, 168px); margin-top: 22px; }
+.hero h1 .script { display: block; font-size: .62em; line-height: 1.05; color: var(--paper); margin-top: .08em; transform: rotate(-3deg); transform-origin: 0 50%; text-shadow: 4px 4px 0 var(--berry); }
+.hero-lede { max-width: 30em; font-size: 19px; margin-top: 26px; font-weight: 500; }
+.picker { margin-top: 30px; }
+.picker .label { background: none; padding: 0; margin-bottom: 12px; display: block; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { display: inline-flex; align-items: center; gap: 10px; border: 2px solid var(--berry); background: transparent; border-radius: 999px; padding: 10px 18px 10px 12px; font-weight: 700; font-size: 16px; transition: background .25s, color .25s, transform .25s; }
+.chip i { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--berry); background: var(--c); }
+.chip:hover { transform: translateY(-2px); }
+.chip[aria-pressed="true"] { background: var(--berry); color: var(--paper); }
+.chip[aria-pressed="true"] i { border-color: var(--paper); }
+.hero-stage { position: relative; height: clamp(440px, 52vw, 680px); min-width: 0; }
+.hero-stage .disc { position: absolute; left: 50%; top: 52%; width: 86%; aspect-ratio: 1; max-width: 100%; transform: translate(-50%, -50%); border-radius: 50%; background: var(--paper); opacity: .22; }
+.hero-stage .disc.two { width: 62%; opacity: .26; }
+.bottle-hero { position: absolute; left: 50%; bottom: -6px; width: min(300px, 56%); transform: translateX(-50%) rotate(-4deg); filter: drop-shadow(14px 18px 0 rgba(43,15,42,.28)); animation: sway 6s ease-in-out infinite; }
+@keyframes sway { 0%, 100% { transform: translateX(-50%) rotate(-4deg) translateY(0); } 50% { transform: translateX(-50%) rotate(2deg) translateY(-12px); } }
+.slice { position: absolute; width: var(--s); aspect-ratio: 1; animation: float var(--d, 7s) ease-in-out infinite; animation-delay: var(--delay, 0s); will-change: transform; }
+.slice svg { width: 100%; height: 100%; animation: spin var(--spin, 26s) linear infinite; filter: drop-shadow(6px 8px 0 rgba(43,15,42,.22)); }
+@keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -18px; } }
+@keyframes spin { to { rotate: 360deg; } }
+.sticker { position: absolute; right: 2%; top: 10%; width: 132px; aspect-ratio: 1; border-radius: 50%; background: var(--lemon); border: 3px solid var(--berry); display: grid; place-items: center; text-align: center; transform: rotate(12deg); box-shadow: 6px 6px 0 var(--berry); z-index: 3; }
+.sticker b { display: block; font: 800 40px/0.9 var(--display); font-variation-settings: "wdth" 75; letter-spacing: -.03em; }
+.sticker span { font: 500 10px/1.25 var(--mono); letter-spacing: .1em; text-transform: uppercase; display: block; margin-top: 4px; }
+.sticker svg { position: absolute; inset: -12px; width: calc(100% + 24px); height: calc(100% + 24px); animation: spin 18s linear infinite; }
+
+/* ---------- marquee ---------- */
+.marquee { background: var(--berry); color: var(--lemon); overflow: hidden; border-block: 3px solid var(--berry); }
+.marquee .track { display: flex; width: max-content; animation: slide 32s linear infinite; }
+.marquee span { display: inline-flex; align-items: center; gap: 28px; padding: 18px 14px; font: 800 clamp(22px, 2.6vw, 34px)/1 var(--display); font-variation-settings: "wdth" 78; letter-spacing: -.01em; text-transform: uppercase; white-space: nowrap; }
+.marquee svg { width: 26px; height: 26px; flex: none; }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* ---------- section heads ---------- */
+section { position: relative; }
+.sec { padding-block: clamp(64px, 9vw, 120px); }
+.sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: clamp(32px, 4vw, 56px); }
+.sec-head h2 { font-size: clamp(48px, 7vw, 108px); }
+.sec-head p { max-width: 26em; font-size: 18px; color: var(--berry-soft); font-weight: 500; }
+
+/* ---------- lineup ---------- */
+.cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.card { background: var(--white); border: 3px solid var(--berry); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s; box-shadow: 0 0 0 var(--berry); }
+.card:hover { transform: translate(-4px, -6px); box-shadow: 8px 10px 0 var(--berry); }
+.card .top { background: var(--c); height: 250px; position: relative; display: grid; place-items: end center; border-bottom: 3px solid var(--berry); overflow: hidden; }
+.card .top::before { content: ""; position: absolute; width: 190px; height: 190px; border-radius: 50%; background: var(--paper); opacity: .3; top: 22px; left: 50%; transform: translateX(-50%); }
+.card .top svg.mini { width: 112px; position: relative; margin-bottom: -40px; transition: transform .45s cubic-bezier(.2,.8,.2,1); filter: drop-shadow(8px 8px 0 rgba(43,15,42,.25)); }
+.card:hover .top svg.mini { transform: translateY(-26px) rotate(-6deg); }
+.card .tag { position: absolute; left: 16px; top: 16px; background: var(--paper); border: 2px solid var(--berry); border-radius: 999px; padding: 6px 10px; font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.card .body { padding: 22px 22px 22px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.card h3 { font-size: 34px; }
+.ingr { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 15px; }
+.ingr li { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed var(--berry-line); padding-bottom: 6px; }
+.ingr li span:last-child { font-family: var(--mono); font-size: 13px; color: var(--berry-soft); font-variant-numeric: tabular-nums; }
+.card .foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-top: 6px; }
+.price { font: 800 30px/1 var(--display); font-variation-settings: "wdth" 80; font-variant-numeric: tabular-nums; }
+.price small { font: 500 12px/1 var(--mono); color: var(--berry-soft); margin-left: 6px; letter-spacing: .04em; }
+.add { border: 2px solid var(--berry); background: var(--lemon); border-radius: 999px; padding: 10px 16px; font-weight: 800; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; transition: background .2s, transform .2s; }
+.add:hover { background: var(--berry); color: var(--lemon); transform: rotate(-3deg); }
+
+/* ---------- process ---------- */
+.process { background: var(--lemon); border-block: 3px solid var(--berry); overflow: hidden; }
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border: 3px solid var(--berry); border-radius: var(--radius); background: var(--paper); overflow: hidden; }
+.step { padding: 28px 26px 30px; border-right: 3px solid var(--berry); display: flex; flex-direction: column; gap: 14px; position: relative; min-width: 0; }
+.step:last-child { border-right: 0; }
+.step time { font: 800 clamp(48px, 5.4vw, 76px)/.9 var(--display); font-variation-settings: "wdth" 75; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.step svg { width: 64px; height: 64px; }
+.step h3 { font-size: 26px; letter-spacing: -.02em; }
+.step p { color: var(--berry-soft); font-size: 16px; }
+.step .label { color: var(--berry); opacity: .7; }
+.press-meter { margin-top: 32px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; font-weight: 600; }
+.press-meter .bar { flex: 1 1 280px; height: 16px; border: 3px solid var(--berry); border-radius: 999px; background: var(--paper); overflow: hidden; }
+.press-meter .bar i { display: block; height: 100%; width: 0; background: repeating-linear-gradient(-45deg, var(--tangerine) 0 12px, var(--pink) 12px 24px); transition: width 2.2s cubic-bezier(.2,.8,.2,1); }
+.press-meter.go .bar i { width: 100%; }
+
+/* ---------- nutrition ---------- */
+.facts-sec { background: var(--pink); }
+.facts-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: clamp(32px, 6vw, 96px); align-items: center; }
+.facts-grid h2 { font-size: clamp(56px, 8vw, 128px); }
+.facts-grid h2 .script { color: var(--paper); font-size: .7em; display: block; text-shadow: 4px 4px 0 var(--berry); transform: rotate(-2deg); transform-origin: 0 50%; margin-top: .1em; }
+.facts-copy p { font-size: 19px; max-width: 28em; margin-top: 24px; font-weight: 500; }
+.facts-copy .chips { margin-top: 28px; }
+.nf { background: var(--white); border: 3px solid var(--berry); padding: 14px 18px 18px; box-shadow: 12px 12px 0 var(--berry); transform: rotate(1.5deg); font-family: var(--body); min-width: 0; }
+.nf h3 { font: 900 44px/1 var(--body); letter-spacing: -.03em; border-bottom: 1px solid var(--berry); padding-bottom: 6px; font-variation-settings: normal; }
+.nf .serv { display: flex; justify-content: space-between; font-weight: 800; font-size: 17px; padding: 6px 0; border-bottom: 10px solid var(--berry); }
+.nf .cal { display: flex; justify-content: space-between; align-items: end; border-bottom: 5px solid var(--berry); padding: 6px 0; }
+.nf .cal b { font: 900 30px/1 var(--body); }
+.nf .cal strong { font: 900 46px/1 var(--body); font-variant-numeric: tabular-nums; }
+.nf .row { display: flex; justify-content: space-between; border-bottom: 1px solid var(--berry); padding: 6px 0; font-size: 16px; font-variant-numeric: tabular-nums; }
+.nf .row.ind { padding-left: 18px; }
+.nf .row.thick { border-bottom-width: 10px; }
+.nf .note { font-size: 12px; line-height: 1.4; padding-top: 8px; color: var(--berry-soft); }
+.nf [data-v] { transition: opacity .2s; }
+
+/* ---------- subscription ---------- */
+.box-sec { background: var(--kiwi); border-top: 3px solid var(--berry); }
+.toggle { display: inline-flex; border: 3px solid var(--berry); border-radius: 999px; background: var(--paper); padding: 4px; gap: 4px; }
+.toggle button { border: 0; background: none; border-radius: 999px; padding: 10px 18px; font-weight: 800; font-size: 15px; }
+.toggle button[aria-pressed="true"] { background: var(--berry); color: var(--paper); }
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 36px; }
+.plan { position: relative; text-align: left; border: 3px solid var(--berry); background: var(--paper); border-radius: var(--radius); padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 16px; transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s, background .3s; }
+.plan:hover { transform: translateY(-4px); }
+.plan[aria-pressed="true"] { background: var(--lemon); box-shadow: 10px 10px 0 var(--berry); transform: translate(-4px, -4px); }
+.plan .count { font: 800 clamp(72px, 8vw, 112px)/.85 var(--display); font-variation-settings: "wdth" 75; letter-spacing: -.05em; }
+.plan .count small { font: 500 13px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; margin-left: 8px; vertical-align: top; }
+.plan .bottles { display: flex; flex-wrap: wrap; gap: 4px; min-height: 40px; }
+.plan .bottles i { width: 12px; height: 26px; border-radius: 4px 4px 3px 3px; border: 2px solid var(--berry); background: var(--c); }
+.plan .per { font-weight: 700; font-size: 18px; font-variant-numeric: tabular-nums; }
+.plan .per span { color: var(--berry-soft); font-weight: 500; font-size: 15px; }
+.plan .ribbon { position: absolute; top: -16px; right: 20px; background: var(--pink); border: 3px solid var(--berry); border-radius: 999px; padding: 6px 12px; font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; transform: rotate(4deg); }
+.summary { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; background: var(--berry); color: var(--paper); border-radius: var(--radius); padding: 22px 26px; }
+.summary .tot { font: 800 40px/1 var(--display); font-variation-settings: "wdth" 80; font-variant-numeric: tabular-nums; color: var(--lemon); }
+.summary p { font-size: 16px; opacity: .85; }
+.cta { border: 3px solid var(--lemon); background: var(--lemon); color: var(--berry); border-radius: 999px; padding: 14px 24px; font-weight: 900; font-size: 17px; transition: transform .2s, background .2s; }
+.cta:hover { transform: rotate(-2deg) scale(1.03); }
+
+/* ---------- footer ---------- */
+footer { background: var(--berry); color: var(--paper); overflow: hidden; }
+footer .big { font: 400 clamp(96px, 22vw, 340px)/1 var(--script); color: var(--lemon); letter-spacing: -.02em; margin: 0; padding-block: 40px 28px; white-space: nowrap; }
+.foot-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; padding-block: 40px 24px; border-top: 2px solid rgba(255,251,242,.18); }
+.foot-cols h3 { margin: 0 0 10px; font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--lemon); }
+.foot-cols p { font-size: 16px; opacity: .85; }
+.fine { padding-block: 18px 28px; font: 400 12px/1.5 var(--mono); opacity: .55; letter-spacing: .04em; }
+
+/* ---------- toast ---------- */
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 140%); background: var(--berry); color: var(--paper); border: 3px solid var(--lemon); border-radius: 999px; padding: 12px 20px; font-weight: 700; z-index: 50; transition: transform .45s cubic-bezier(.2,.9,.3,1.2), visibility .45s; max-width: calc(100% - 32px); text-align: center; visibility: hidden; }
+.toast.on { transform: translate(-50%, 0); visibility: visible; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1080px) {
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .step:nth-child(2) { border-right: 0; }
+  .step:nth-child(-n+2) { border-bottom: 3px solid var(--berry); }
+}
+@media (max-width: 860px) {
+  .nav ul { display: none; }
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); }
+  .hero-copy { padding-bottom: 8px; }
+  .hero-stage { height: 460px; }
+  .facts-grid { grid-template-columns: minmax(0, 1fr); }
+  .plans { grid-template-columns: minmax(0, 1fr); }
+  .foot-cols { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .logo small { display: none; }
+  .cards, .steps { grid-template-columns: minmax(0, 1fr); }
+  .step { border-right: 0; border-bottom: 3px solid var(--berry); }
+  .step:last-child { border-bottom: 0; }
+  .sticker { width: 104px; right: 0; top: 4%; }
+  .sticker b { font-size: 32px; }
+  .nf { transform: none; box-shadow: 8px 8px 0 var(--berry); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="bottleClip"><path d="M72 46 H128 V86 C128 104 178 114 178 156 V418 C178 440 162 456 140 456 H60 C38 456 22 440 22 418 V156 C22 114 72 104 72 86 Z"/></clipPath>
+    <symbol id="bottle" viewBox="0 0 200 470">
+      <path d="M72 46 H128 V86 C128 104 178 114 178 156 V418 C178 440 162 456 140 456 H60 C38 456 22 440 22 418 V156 C22 114 72 104 72 86 Z" fill="#FFFFFF" fill-opacity=".55"/>
+      <g clip-path="url(#bottleClip)"><path d="M0 190 Q 50 176 100 190 T 200 190 V470 H0Z" style="fill:var(--juice)"/><rect x="38" y="150" width="14" height="250" rx="7" fill="#FFFFFF" fill-opacity=".45"/></g>
+      <path d="M72 46 H128 V86 C128 104 178 114 178 156 V418 C178 440 162 456 140 456 H60 C38 456 22 440 22 418 V156 C22 114 72 104 72 86 Z" fill="none" stroke="#2B0F2A" stroke-width="6" stroke-linejoin="round"/>
+      <rect x="64" y="10" width="72" height="42" rx="10" fill="#2B0F2A"/>
+      <rect x="40" y="250" width="120" height="120" rx="12" fill="#FFFBF2" stroke="#2B0F2A" stroke-width="5"/>
+      <text x="100" y="300" text-anchor="middle" font-family="Shrikhand, Georgia, serif" font-size="30" fill="#2B0F2A">pressa</text>
+      <text x="100" y="336" text-anchor="middle" font-family="DM Mono, monospace" font-size="13" fill="#2B0F2A" letter-spacing="1.5">330 ML</text>
+    </symbol>
+    <symbol id="star" viewBox="0 0 40 40"><path d="M20 0 L23.5 14 L38 10 L27 20 L38 30 L23.5 26 L20 40 L16.5 26 L2 30 L13 20 L2 10 L16.5 14Z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">pressa <small>juice studio</small></a>
+    <nav aria-label="Main"><ul><li><a href="#lineup">Lineup</a></li><li><a href="#process">How we press</a></li><li><a href="#facts">What’s inside</a></li><li><a href="#box">Weekly box</a></li></ul></nav>
+    <button class="box-btn" id="boxBtn" type="button">Your box <b id="boxCount">0</b></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Pressa">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="label"><i></i>Pressed today at 06:40 · Lisbon</span>
+        <h1>Squeezed <span class="script">this morning.</span></h1>
+        <p class="hero-lede">Cold-pressed juice from whole fruit and vegetables. Nothing added, nothing heated, bottled in glass and delivered before 9:00.</p>
+        <div class="picker">
+          <span class="label">Pick your press</span>
+          <div class="chips" role="group" aria-label="Flavour" id="heroChips"></div>
+        </div>
+      </div>
+      <div class="hero-stage" aria-hidden="true" id="stage">
+        <div class="disc"></div><div class="disc two"></div>
+        <div class="sticker"><svg viewBox="0 0 160 160"><defs><path id="circ" d="M80 80 m-66 0 a66 66 0 1 1 132 0 a66 66 0 1 1 -132 0"/></defs><text font-family="DM Mono, monospace" font-size="11.5" letter-spacing="3.2" fill="#2B0F2A"><textPath href="#circ">NO ADDED SUGAR · NO HEAT · NO WATER ·</textPath></text></svg><div><b>72h</b><span>fresh<br>window</span></div></div>
+        <div class="slice" style="--s:120px;left:2%;top:14%;--d:7s;--spin:30s" data-depth="18"></div>
+        <div class="slice" style="--s:86px;left:12%;bottom:12%;--d:6s;--delay:-2s;--spin:22s" data-depth="30"></div>
+        <div class="slice" style="--s:104px;right:6%;bottom:22%;--d:8s;--delay:-4s;--spin:34s" data-depth="24"></div>
+        <div class="slice" style="--s:70px;right:24%;top:4%;--d:5.5s;--delay:-1s;--spin:18s" data-depth="36"></div>
+        <svg class="bottle-hero" viewBox="0 0 200 470" id="heroBottle">
+          <path d="M72 46 H128 V86 C128 104 178 114 178 156 V418 C178 440 162 456 140 456 H60 C38 456 22 440 22 418 V156 C22 114 72 104 72 86 Z" fill="#FFFFFF" fill-opacity=".6"/>
+          <g clip-path="url(#bottleClip)">
+            <path id="wave" d="M0 170 V470 H200 V170Z" style="fill:var(--juice);transition:fill .6s"/>
+            <g id="bubbles" fill="#FFFFFF" fill-opacity=".55"></g>
+            <rect x="38" y="150" width="14" height="250" rx="7" fill="#FFFFFF" fill-opacity=".45"/>
+          </g>
+          <path d="M72 46 H128 V86 C128 104 178 114 178 156 V418 C178 440 162 456 140 456 H60 C38 456 22 440 22 418 V156 C22 114 72 104 72 86 Z" fill="none" stroke="#2B0F2A" stroke-width="6" stroke-linejoin="round"/>
+          <rect x="64" y="10" width="72" height="42" rx="10" fill="#2B0F2A"/>
+          <rect x="36" y="236" width="128" height="150" rx="12" fill="#FFFBF2" stroke="#2B0F2A" stroke-width="5"/>
+          <text x="100" y="282" text-anchor="middle" font-family="Shrikhand, Georgia, serif" font-size="30" fill="#2B0F2A">pressa</text>
+          <text x="100" y="322" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="22" fill="#2B0F2A" id="labelName">Sunrise</text>
+          <text x="100" y="352" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#2B0F2A" letter-spacing="1.4">330 ML</text>
+          <text x="100" y="370" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#2B0F2A" letter-spacing="1.4">COLD-PRESSED</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div>
+
+  <section class="sec" id="lineup" aria-labelledby="lineupTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="lineupTitle">The lineup</h2>
+        <p>Four recipes, pressed in small batches every morning. Grams are per 330 ml bottle, weighed before pressing.</p>
+      </div>
+      <div class="cards" id="cards"></div>
+    </div>
+  </section>
+
+  <section class="process sec" id="process" aria-labelledby="procTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="procTitle">Crate to bottle<br>in four hours</h2>
+        <p>Every bottle you get was fruit at dawn. Here is one ordinary weekday at the studio.</p>
+      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0">
+        <li class="step"><span class="label">Step 1 · Arrive</span><time>05:30</time>
+          <svg viewBox="0 0 64 64" fill="none" stroke="#2B0F2A" stroke-width="3.5" stroke-linejoin="round"><path d="M6 26h52l-5 28H11z"/><path d="M6 26l8-12h36l8 12M20 34v12M32 34v12M44 34v12"/><circle cx="24" cy="12" r="5" fill="#FF6B1A"/><circle cx="36" cy="10" r="5" fill="#FFD23F"/><circle cx="46" cy="14" r="4" fill="#1FB46B"/></svg>
+          <h3>Crates come in</h3><p>Fruit from three farms in the Oeste region, picked the day before.</p></li>
+        <li class="step"><span class="label">Step 2 · Prep</span><time>07:00</time>
+          <svg viewBox="0 0 64 64" fill="none" stroke="#2B0F2A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 50l30-30 8 8-30 30H8z"/><path d="M38 20l8-8 8 8-8 8"/><circle cx="46" cy="46" r="10" fill="#FF5C93"/><path d="M46 36v20M36 46h20" stroke="#FFFBF2" stroke-width="2"/></svg>
+          <h3>Washed and cut</h3><p>By hand. Peel stays on where it adds flavour, comes off where it turns bitter.</p></li>
+        <li class="step"><span class="label">Step 3 · Press</span><time>08:15</time>
+          <svg viewBox="0 0 64 64" fill="none" stroke="#2B0F2A" stroke-width="3.5" stroke-linejoin="round"><rect x="12" y="6" width="40" height="10" rx="3"/><path d="M32 16v10"/><rect x="14" y="26" width="36" height="14" rx="4" fill="#FFD23F"/><path d="M18 40h28l-4 16H22z"/><path d="M32 56v4" stroke-linecap="round"/></svg>
+          <h3>Two tonnes of press</h3><p>A hydraulic press squeezes the pulp in cloth bags. No blades, no heat, no air whipped in.</p></li>
+        <li class="step"><span class="label">Step 4 · Chill</span><time>10:00</time>
+          <svg viewBox="0 0 64 64" fill="none" stroke="#2B0F2A" stroke-width="3.5" stroke-linejoin="round"><path d="M26 6h12v8c0 4 8 6 8 14v28a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4V28c0-8 8-10 8-14z" fill="#1FB46B" fill-opacity=".35"/><path d="M50 10v14M44 17h12M46 12l8 10M54 12l-8 10" stroke-linecap="round"/></svg>
+          <h3>Bottled at 4 °C</h3><p>Into glass, onto ice, into the van. Drink within 72 hours for full flavour.</p></li>
+      </ol>
+      <div class="press-meter" id="meter"><span class="label">Today’s batch</span><div class="bar"><i></i></div><span><b>612</b> bottles pressed</span></div>
+    </div>
+  </section>
+
+  <section class="facts-sec sec" id="facts" aria-labelledby="factsTitle">
+    <div class="wrap facts-grid">
+      <div class="facts-copy">
+        <h2 id="factsTitle">What’s in it <span class="script">is on it.</span></h2>
+        <p>Every label lists the fruit by weight and the full nutrition panel. The sugar is the fruit’s own; we never add any.</p>
+        <div class="chips" role="group" aria-label="Show nutrition for" id="factsChips"></div>
+      </div>
+      <div class="nf" aria-live="polite">
+        <h3>Nutrition Facts</h3>
+        <div class="serv"><span>Serving size</span><span>330 ml (1 bottle)</span></div>
+        <div class="cal"><b>Calories</b><strong data-v="kcal">112</strong></div>
+        <div class="row"><b>Total fat</b><span data-v="fat">0.4 g</span></div>
+        <div class="row"><b>Sodium</b><span data-v="na">60 mg</span></div>
+        <div class="row"><b>Total carbohydrate</b><span data-v="carb">26 g</span></div>
+        <div class="row ind"><span>Dietary fibre</span><span data-v="fib">1 g</span></div>
+        <div class="row ind"><span>Total sugars</span><span data-v="sug">21 g</span></div>
+        <div class="row ind"><span>Includes added sugars</span><span>0 g</span></div>
+        <div class="row thick"><b>Protein</b><span data-v="pro">2 g</span></div>
+        <div class="row"><span>Vitamin C</span><span data-v="vc">120%</span></div>
+        <div class="row"><span>Vitamin A</span><span data-v="va">180%</span></div>
+        <p class="note">% Daily Value based on a 2,000 calorie diet. Values for this concept are illustrative.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="box-sec sec" id="box" aria-labelledby="boxTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="boxTitle">The weekly box</h2>
+        <div class="toggle" role="group" aria-label="Delivery frequency">
+          <button type="button" aria-pressed="true" data-freq="weekly">Every week</button>
+          <button type="button" aria-pressed="false" data-freq="fortnight">Every two weeks</button>
+        </div>
+      </div>
+      <div class="plans" id="plans"></div>
+      <div class="summary">
+        <div><div class="label" style="color:var(--lemon);opacity:.8">Your box</div><div class="tot" id="total">€54.00</div></div>
+        <p id="summaryText">12 bottles every week, delivered Monday and Thursday before 9:00.</p>
+        <button class="cta" type="button" id="choose">Start my box</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="big" aria-hidden="true">pressa</p>
+    <div class="foot-cols">
+      <div><h3>Visit the press</h3><p>Rua das Laranjeiras 14<br>1200 Lisbon</p></div>
+      <div><h3>Hours</h3><p>Mon to Sat, 07:00 to 15:00<br>Pressing from 05:30</p></div>
+      <div><h3>Delivery</h3><p>Monday and Thursday, before 9:00<br>Glass bottles collected on the next drop</p></div>
+    </div>
+    <p class="fine">Concept design for a fictional brand. Prices, values and addresses are examples.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  const FLAVOURS = [
+    { id: 'sunrise', name: 'Sunrise', color: '#FF6B1A', juice: '#E04E08', tag: 'Bestseller', price: 5.5,
+      ingr: [['Orange', '180 g'], ['Carrot', '120 g'], ['Ginger', '8 g'], ['Turmeric', '2 g']],
+      nf: { kcal: 112, fat: '0.4 g', na: '60 mg', carb: '26 g', fib: '1 g', sug: '21 g', pro: '2 g', vc: '120%', va: '180%' } },
+    { id: 'green', name: 'Green Mile', color: '#1FB46B', juice: '#0C8A4D', tag: 'Low sugar', price: 5.9,
+      ingr: [['Apple', '160 g'], ['Cucumber', '120 g'], ['Spinach', '40 g'], ['Lime & mint', '18 g']],
+      nf: { kcal: 86, fat: '0.3 g', na: '45 mg', carb: '20 g', fib: '1 g', sug: '16 g', pro: '2 g', vc: '45%', va: '60%' } },
+    { id: 'pink', name: 'Pink Drift', color: '#FF5C93', juice: '#E2336F', tag: 'Summer only', price: 5.5,
+      ingr: [['Watermelon', '220 g'], ['Strawberry', '80 g'], ['Lime', '15 g'], ['Basil', '2 g']],
+      nf: { kcal: 94, fat: '0.4 g', na: '10 mg', carb: '22 g', fib: '1 g', sug: '18 g', pro: '2 g', vc: '95%', va: '25%' } },
+    { id: 'gold', name: 'Gold Rush', color: '#FFD23F', juice: '#FF8A1F', tag: 'Spicy', price: 5.9,
+      ingr: [['Pineapple', '200 g'], ['Lemon', '40 g'], ['Ginger', '10 g'], ['Cayenne', '0.5 g']],
+      nf: { kcal: 104, fat: '0.2 g', na: '5 mg', carb: '25 g', fib: '1 g', sug: '20 g', pro: '1 g', vc: '150%', va: '3%' } },
+  ];
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const root = document.documentElement;
+  const fmt = (n) => '€' + n.toFixed(2);
+
+  /* fruit slices (generated, so each one is a little different) */
+  const SLICES = [
+    { rind: '#FF8A1F', pith: '#FFE3B8', flesh: '#FFA733', seg: 10 },
+    { rind: '#F5C400', pith: '#FFF6C8', flesh: '#FFE14D', seg: 9 },
+    { rind: '#5C8A2A', pith: '#C9E77A', flesh: '#8CCB3E', seg: 0, kiwi: true },
+    { rind: '#FF4F81', pith: '#FFD0DE', flesh: '#FF7FA5', seg: 8 },
+  ];
+  function sliceSVG(c) {
+    const r = 46, inner = 38;
+    let wedges = '';
+    if (c.kiwi) {
+      for (let i = 0; i < 22; i++) { const a = i / 22 * Math.PI * 2; wedges += `<ellipse cx="${50 + Math.cos(a) * 16}" cy="${50 + Math.sin(a) * 16}" rx="1.8" ry="3.6" transform="rotate(${a * 57.3 + 90} ${50 + Math.cos(a) * 16} ${50 + Math.sin(a) * 16})" fill="#2B0F2A"/>`; }
+      wedges = `<circle cx="50" cy="50" r="${inner}" fill="${c.flesh}"/>` + wedges + `<circle cx="50" cy="50" r="9" fill="${c.pith}"/>`;
+    } else {
+      for (let i = 0; i < c.seg; i++) {
+        const a0 = (i / c.seg) * Math.PI * 2 + .05, a1 = ((i + 1) / c.seg) * Math.PI * 2 - .05;
+        const p = (a, rr) => `${(50 + Math.cos(a) * rr).toFixed(2)} ${(50 + Math.sin(a) * rr).toFixed(2)}`;
+        wedges += `<path d="M${p((a0 + a1) / 2, 5)} L${p(a0, inner - 2)} A${inner - 2} ${inner - 2} 0 0 1 ${p(a1, inner - 2)}Z" fill="${c.flesh}"/>`;
+      }
+      wedges = `<circle cx="50" cy="50" r="${inner}" fill="${c.pith}"/>` + wedges;
+    }
+    return `<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="${r + 2}" fill="#2B0F2A"/><circle cx="50" cy="50" r="${r - 1}" fill="${c.rind}"/><circle cx="50" cy="50" r="${inner + 3}" fill="${c.pith}"/>${wedges}</svg>`;
+  }
+  $$('.slice').forEach((el, i) => { el.innerHTML = sliceSVG(SLICES[i % SLICES.length]); });
+
+  /* marquee */
+  const words = ['Cold-pressed at 4 °C', 'No added sugar', 'Bottled today', 'Glass, not plastic', 'Fruit from the Oeste'];
+  const star = '<svg><use href="#star"/></svg>';
+  const run = words.map(w => `<span>${w}${star}</span>`).join('');
+  $('#marquee').innerHTML = run + run;
+
+  /* flavour state shared by hero, label and nutrition panel */
+  let current = 0;
+  function chipHTML(f, i) { return `<button class="chip" type="button" style="--c:${f.color}" data-i="${i}" aria-pressed="${i === current}"><i></i>${f.name}</button>`; }
+  function renderChips() { ['#heroChips', '#factsChips'].forEach(sel => { $(sel).innerHTML = FLAVOURS.map(chipHTML).join(''); }); }
+  function setFlavour(i) {
+    current = i; const f = FLAVOURS[i];
+    root.style.setProperty('--stage', f.color);
+    // the hero sits on the flavour colour, so the juice is drawn a shade deeper to stay visible against it
+    root.style.setProperty('--juice', f.juice);
+    $('#labelName').textContent = f.name;
+    $$('.chip').forEach(c => c.setAttribute('aria-pressed', String(+c.dataset.i === i)));
+    for (const [k, v] of Object.entries(f.nf)) { const el = $(`[data-v="${k}"]`); if (el) el.textContent = v; }
+  }
+  renderChips();
+  document.addEventListener('click', e => { const c = e.target.closest('.chip'); if (c) setFlavour(+c.dataset.i); });
+
+  /* product cards */
+  $('#cards').innerHTML = FLAVOURS.map((f, i) => `
+    <article class="card" style="--c:${f.color}">
+      <div class="top"><span class="tag">${f.tag}</span><svg class="mini" viewBox="0 0 200 470" style="--juice:${f.juice}"><use href="#bottle"/></svg></div>
+      <div class="body">
+        <h3>${f.name}</h3>
+        <ul class="ingr">${f.ingr.map(([n, g]) => `<li><span>${n}</span><span>${g}</span></li>`).join('')}</ul>
+        <div class="foot"><span class="price">${fmt(f.price)}<small>${f.nf.kcal} kcal</small></span>
+          <button class="add" type="button" data-add="${i}" aria-label="Add ${f.name} to your box">Add <span aria-hidden="true">+</span></button></div>
+      </div>
+    </article>`).join('');
+
+  /* box + toast */
+  let count = 0, toastTimer;
+  function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('on'), 2600); }
+  $('#cards').addEventListener('click', e => {
+    const b = e.target.closest('[data-add]'); if (!b) return;
+    count++; $('#boxCount').textContent = count;
+    const btn = $('#boxBtn'); btn.classList.remove('bump'); void btn.offsetWidth; btn.classList.add('bump');
+    toast(`Added ${FLAVOURS[+b.dataset.add].name} to your box`);
+  });
+  $('#boxBtn').addEventListener('click', () => toast(count ? `${count} bottle${count > 1 ? 's' : ''} in your box` : 'Your box is empty. Add a bottle from the lineup.'));
+
+  /* subscription */
+  const PLANS = [{ n: 6, per: 5.0 }, { n: 12, per: 4.5, ribbon: 'Most chosen' }, { n: 18, per: 4.0 }];
+  let freq = 'weekly', plan = 1;
+  const palette = FLAVOURS.map(f => f.color);
+  function renderPlans() {
+    $('#plans').innerHTML = PLANS.map((p, i) => {
+      const per = p.per + (freq === 'fortnight' ? .3 : 0);
+      return `<button class="plan" type="button" data-plan="${i}" aria-pressed="${i === plan}">${p.ribbon ? `<span class="ribbon">${p.ribbon}</span>` : ''}
+        <span class="count">${p.n}<small>bottles</small></span>
+        <span class="bottles">${Array.from({ length: p.n }, (_, k) => `<i style="--c:${palette[k % 4]}"></i>`).join('')}</span>
+        <span class="per">${fmt(per)} <span>per bottle</span></span></button>`; }).join('');
+    const p = PLANS[plan], per = p.per + (freq === 'fortnight' ? .3 : 0);
+    $('#total').textContent = fmt(p.n * per);
+    $('#summaryText').textContent = `${p.n} bottles ${freq === 'weekly' ? 'every week' : 'every two weeks'}, delivered Monday and Thursday before 9:00.`;
+  }
+  $('#plans').addEventListener('click', e => { const b = e.target.closest('[data-plan]'); if (b) { plan = +b.dataset.plan; renderPlans(); } });
+  $$('[data-freq]').forEach(b => b.addEventListener('click', () => { freq = b.dataset.freq; $$('[data-freq]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); renderPlans(); }));
+  $('#choose').addEventListener('click', () => toast(`Saved: ${PLANS[plan].n} bottles, ${freq === 'weekly' ? 'weekly' : 'every two weeks'}. Checkout isn’t part of this concept.`));
+  renderPlans();
+
+  /* hero bottle: live liquid surface + bubbles */
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const wave = $('#wave'), bub = $('#bubbles');
+  const bubbles = Array.from({ length: 12 }, (_, i) => { const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle'); bub.appendChild(c);
+    return { c, x: 40 + Math.random() * 120, r: 2 + Math.random() * 5, v: 18 + Math.random() * 30, y: 200 + Math.random() * 250 }; });
+  let last = performance.now();
+  function frame(now) {
+    const t = now / 1000, dt = Math.min(.05, (now - last) / 1000); last = now;
+    let d = 'M0 470 L';
+    for (let x = 0; x <= 200; x += 10) d += `${x === 0 ? '' : 'L'}${x} ${(172 + Math.sin(t * 2.2 + x * .045) * 5 + Math.sin(t * 1.3 + x * .09) * 3).toFixed(2)} `;
+    wave.setAttribute('d', d + 'L200 470Z');
+    for (const b of bubbles) { b.y -= b.v * dt; if (b.y < 185) { b.y = 455; b.x = 40 + Math.random() * 120; }
+      b.c.setAttribute('cx', (b.x + Math.sin(t * 2 + b.r) * 3).toFixed(1)); b.c.setAttribute('cy', b.y.toFixed(1)); b.c.setAttribute('r', b.r); }
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  /* gentle parallax on the floating slices */
+  const stage = $('#stage');
+  if (!reduce && matchMedia('(pointer: fine)').matches) {
+    window.addEventListener('pointermove', e => {
+      const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5;
+      $$('.slice', stage).forEach(s => { const k = +s.dataset.depth; s.style.transform = `translate(${-x * k}px, ${-y * k}px)`; });
+    });
+  }
+
+  /* press meter fills when the process section comes into view (it is readable before that) */
+  const meter = $('#meter');
+  if ('IntersectionObserver' in window) new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { meter.classList.add('go'); o.disconnect(); } }, { threshold: .5 }).observe(meter);
+  else meter.classList.add('go');
+
+  setFlavour(0);
+})();
+</script>
+</body>
+</html>
