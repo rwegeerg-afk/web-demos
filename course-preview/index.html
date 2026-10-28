@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interface Design Foundations: Northlight Courses (demo)</title>
+<meta name="description" content="Demo shop page: a course product with an interactive preview of the course folder, built as a portfolio sample. Not client work.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z"/></symbol>
+    <symbol id="i-pdf" viewBox="0 0 24 24"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-design" viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4z"/><circle cx="16.5" cy="16.5" r="3.5"/></symbol>
+    <symbol id="i-archive" viewBox="0 0 24 24"><path d="M4 7h16v4H4zM5 11h14v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1zM10 14h4"/></symbol>
+    <symbol id="i-subtitle" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M8 11h2.5M8 14h5M14 11h2"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v5h5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M4 5h2l2 10h9l2-7H7"/><circle cx="10" cy="19" r="1.2"/><circle cx="17" cy="19" r="1.2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce"><strong>Demo project:</strong> a fictional shop built as a portfolio sample, not client work.</div>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="./" aria-label="Northlight Courses, home">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#4f3df5"/><path d="M16 22a4 4 0 0 1 4-4h8l4 5h12a4 4 0 0 1 4 4v17a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4z" fill="#fff"/></svg>
+      <span>Northlight <em>Courses</em></span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="#related">Courses</a>
+      <a href="#related">Bundles</a>
+      <a href="#tabs">Help</a>
+    </nav>
+    <button class="cart" id="cart" type="button" aria-label="Cart, 0 items">
+      <svg class="ic" aria-hidden="true"><use href="#i-cart"/></svg>
+      <span>Cart</span><span class="count" id="cart-count" aria-hidden="true">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Design</a></li>
+        <li aria-current="page">Interface Design Foundations</li>
+      </ol>
+    </nav>
+  </div>
+
+  <article class="wrap product" aria-labelledby="p-title">
+    <figure class="cover">
+      <img src="assets/img/cover-idf.svg" width="800" height="600" alt="Course cover: an interface card with buttons and an image block on a purple background">
+      <figcaption class="badge">Self-paced course</figcaption>
+    </figure>
+
+    <div class="summary">
+      <p class="eyebrow">Design · UI</p>
+      <h1 id="p-title">Interface Design Foundations</h1>
+      <p class="lead">A practical course in layout, type, colour and components. Learn the system behind clean interfaces, then rebuild real screens with the source files included.</p>
+
+      <ul class="chips" aria-label="Course at a glance">
+        <li id="chip-modules">6 modules</li>
+        <li id="chip-files">46 files</li>
+        <li id="chip-size">7.5 GB</li>
+      </ul>
+
+      <div class="price"><span class="now">$49.00</span><span class="note">one-time payment</span></div>
+
+      <div class="actions">
+        <button class="btn btn-primary" id="add" type="button">Add to cart</button>
+        <button class="btn btn-secondary" id="open-preview" type="button" aria-haspopup="dialog">
+          <svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>Preview course contents
+        </button>
+      </div>
+      <p class="hint" id="hint">See exactly what is inside before you buy. Names and sizes only.</p>
+
+      <ul class="trust">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Instant access after purchase</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Download or stream from your account</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Source files included for every module</li>
+      </ul>
+
+      <dl class="meta">
+        <div><dt>SKU:</dt><dd>IDF-001</dd></div>
+        <div><dt>Category:</dt><dd>Design</dd></div>
+        <div><dt>Tags:</dt><dd>UI, Figma, Layout</dd></div>
+      </dl>
+    </div>
+  </article>
+
+  <section class="tabs-sec" id="tabs" aria-label="Product information">
+    <div class="wrap">
+      <div class="tablist" role="tablist" aria-label="Product information">
+        <button class="tab" role="tab" id="t-desc" aria-controls="p-desc" aria-selected="true" type="button">Description</button>
+        <button class="tab" role="tab" id="t-learn" aria-controls="p-learn" aria-selected="false" tabindex="-1" type="button">What you will build</button>
+        <button class="tab" role="tab" id="t-deliv" aria-controls="p-deliv" aria-selected="false" tabindex="-1" type="button">Delivery</button>
+      </div>
+      <div class="panel" role="tabpanel" id="p-desc" aria-labelledby="t-desc">
+        <h2>Design screens that hold together</h2>
+        <p>Most interface problems come from a missing system: uneven spacing, too many type sizes, colours picked one at a time. This course gives you the system first, then lets you practise it on real layouts.</p>
+        <p>Six modules, 17 videos and a worksheet for every topic. Each module ends with a lab you can compare against the finished source file.</p>
+      </div>
+      <div class="panel" role="tabpanel" id="p-learn" aria-labelledby="t-learn" hidden>
+        <h2>Three projects, start to finish</h2>
+        <ul>
+          <li>A responsive marketing page built on a spacing and grid system</li>
+          <li>A type scale and an accessible colour palette you can reuse</li>
+          <li>A small component library with states, ready for handoff</li>
+        </ul>
+      </div>
+      <div class="panel" role="tabpanel" id="p-deliv" aria-labelledby="t-deliv" hidden>
+        <h2>How delivery works</h2>
+        <p>After payment, the files appear in your account and stay there. The preview on this page lists names and sizes only: it never contains download links.</p>
+        <p>Need a receipt or a different format? The help page explains how to reach support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="related wrap" id="related" aria-labelledby="rel-title">
+    <h2 id="rel-title">You may also like</h2>
+    <div class="cards">
+      <a class="card" href="#" style="text-decoration:none">
+        <img src="assets/img/cover-motion.svg" width="640" height="480" alt="" loading="lazy">
+        <div class="body"><h3>Motion Basics for Interfaces</h3><p>Easing, timing and feedback that feel natural.</p><span class="pill">$39.00</span></div>
+      </a>
+      <a class="card" href="#" style="text-decoration:none">
+        <img src="assets/img/cover-brand.svg" width="640" height="480" alt="" loading="lazy">
+        <div class="body"><h3>Brand Identity Sprint</h3><p>From idea to a usable identity in one week.</p><span class="pill">$59.00</span></div>
+      </a>
+      <a class="card" href="#" style="text-decoration:none">
+        <img src="assets/img/cover-research.svg" width="640" height="480" alt="" loading="lazy">
+        <div class="body"><h3>UX Research on a Budget</h3><p>Interviews and tests you can run this month.</p><span class="pill">$29.00</span></div>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Northlight Courses. Demo project, fictional business.</p>
+    <p><a href="admin.html">Admin view (prototype)</a></p>
+  </div>
+</footer>
+
+<dialog id="preview" class="preview" aria-labelledby="pv-title">
+  <div class="pv-head">
+    <div>
+      <p class="eyebrow">Course contents</p>
+      <h2 id="pv-title">Interface Design Foundations</h2>
+    </div>
+    <button class="icon-btn" id="pv-close" type="button" aria-label="Close preview"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+
+  <div class="pv-stats" id="pv-stats" aria-label="Course totals"></div>
+
+  <div class="pv-types">
+    <div class="bar-types" id="pv-bar" role="img" aria-label="File types"></div>
+    <ul class="legend" id="pv-legend"></ul>
+  </div>
+
+  <div class="pv-tools">
+    <div class="search">
+      <label class="sr" for="pv-search">Search files and folders</label>
+      <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+      <input id="pv-search" type="search" placeholder="Search files and folders" autocomplete="off" spellcheck="false">
+    </div>
+    <button class="btn btn-ghost" id="pv-expand" type="button">Expand all</button>
+    <button class="btn btn-ghost" id="pv-collapse" type="button">Collapse all</button>
+  </div>
+  <p class="sr" id="pv-live" role="status" aria-live="polite"></p>
+
+  <div class="pv-body">
+    <ul class="tree" id="pv-tree" role="tree" aria-label="Course files"></ul>
+    <p class="empty" id="pv-empty" hidden></p>
+  </div>
+
+  <div class="pv-foot">
+    <svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>
+    <p><b>Preview only.</b> It lists names and sizes. Files are delivered after purchase through your account. <span id="pv-synced"></span></p>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<noscript><p style="text-align:center;padding:16px">The course contents preview needs JavaScript.</p></noscript>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

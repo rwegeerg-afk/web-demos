@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Abstract cover with bars and a magnifier on a navy background">
+  <rect width="640" height="480" fill="#1e1b4b"/>
+  <g fill="#4f3df5"><rect x="110" y="270" width="64" height="110" rx="12"/><rect x="200" y="210" width="64" height="170" rx="12"/><rect x="290" y="150" width="64" height="230" rx="12"/><rect x="380" y="230" width="64" height="150" rx="12"/></g>
+  <circle cx="450" cy="180" r="74" fill="none" stroke="#ffc542" stroke-width="22"/>
+  <path d="M502 232l74 74" stroke="#ffc542" stroke-width="26" stroke-linecap="round"/>
+  <circle cx="150" cy="130" r="22" fill="#16c79a"/>
+</svg>

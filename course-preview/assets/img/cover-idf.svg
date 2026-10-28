@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Abstract cover with an interface card on a purple gradient">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b2bd9"/>
+      <stop offset="1" stop-color="#8a5cff"/>
+    </linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#fff" fill-opacity=".22"/>
+    </pattern>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#14104a" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#dots)"/>
+  <circle cx="660" cy="110" r="150" fill="#ff7a59"/>
+  <circle cx="130" cy="520" r="120" fill="#16c79a" fill-opacity=".92"/>
+  <rect x="90" y="120" width="620" height="380" rx="26" fill="#fff" filter="url(#sh)"/>
+  <rect x="90" y="120" width="620" height="54" rx="26" fill="#f3f1ff"/>
+  <rect x="90" y="150" width="620" height="24" fill="#f3f1ff"/>
+  <circle cx="126" cy="147" r="7" fill="#ff7a59"/>
+  <circle cx="150" cy="147" r="7" fill="#ffc542"/>
+  <circle cx="174" cy="147" r="7" fill="#16c79a"/>
+  <rect x="130" y="206" width="250" height="26" rx="8" fill="#1b1a2e"/>
+  <rect x="130" y="248" width="340" height="12" rx="6" fill="#d9d6ee"/>
+  <rect x="130" y="270" width="300" height="12" rx="6" fill="#d9d6ee"/>
+  <rect x="130" y="312" width="150" height="46" rx="14" fill="#4f3df5"/>
+  <rect x="296" y="312" width="120" height="46" rx="14" fill="#eceaff"/>
+  <rect x="130" y="392" width="160" height="78" rx="14" fill="#eceaff"/>
+  <rect x="306" y="392" width="160" height="78" rx="14" fill="#ffe9e2"/>
+  <rect x="482" y="392" width="160" height="78" rx="14" fill="#dff6ec"/>
+  <rect x="500" y="206" width="142" height="142" rx="18" fill="#eceaff"/>
+  <path d="M500 330l46-52 34 36 22-24 40 40v18a18 18 0 0 1-18 18H518a18 18 0 0 1-18-18z" fill="#8a5cff" fill-opacity=".55"/>
+  <circle cx="580" cy="246" r="16" fill="#ffc542"/>
+</svg>

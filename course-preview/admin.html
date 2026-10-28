@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin view (prototype): Northlight Courses</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="admin">
+<div class="announce"><strong>Prototype:</strong> shows how the preview data is produced and cached. In a WordPress site this would be a meta box on the WooCommerce product screen.</div>
+
+<main class="admin-wrap" id="main">
+  <p><a href="./">← Back to the product page</a></p>
+  <h1>Edit product: Interface Design Foundations</h1>
+
+  <section class="metabox" aria-labelledby="mb-title">
+    <header><span id="mb-title">Course preview</span><span id="status" role="status">Cached copy in use</span></header>
+    <div class="in">
+      <div class="field">
+        <label for="ref">Course folder reference</label>
+        <input id="ref" type="text" value="cloud-folder: course-idf-001" readonly>
+        <p>Read-only access to the folder listing. The key stays on the server and is never printed on the page.</p>
+      </div>
+
+      <div class="row-actions">
+        <button class="btn btn-primary" id="fetch" type="button">Fetch metadata now</button>
+        <span style="color:var(--ink-3);font-size:14px">Automatic refresh: once a day, plus this button.</span>
+      </div>
+
+      <div class="log" id="log" aria-live="polite">Waiting. The last synced copy is shown below.</div>
+
+      <div class="kv" id="kv" aria-label="Cached totals">
+        <div><b data-k="folders">–</b><span>Folders</span></div>
+        <div><b data-k="files">–</b><span>Files</span></div>
+        <div><b data-k="size">–</b><span>Total size</span></div>
+        <div><b data-k="synced">–</b><span>Last synced (UTC)</span></div>
+      </div>
+
+      <div class="field">
+        <label>Never sent to visitors</label>
+        <ul class="never"><li>File IDs</li><li>Share and download links</li><li>Checksums</li><li>API keys</li></ul>
+      </div>
+
+      <details>
+        <summary>Public JSON: what the browser actually receives</summary>
+        <pre id="json" tabindex="0">Loading…</pre>
+      </details>
+    </div>
+  </section>
+</main>
+<script src="assets/admin.js" defer></script>
+</body>
+</html>

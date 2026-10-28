@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Abstract cover with overlapping shapes on a warm coral background">
+  <rect width="640" height="480" fill="#ff7a59"/>
+  <rect x="70" y="70" width="230" height="230" rx="40" fill="#1b1a2e"/>
+  <circle cx="400" cy="190" r="125" fill="#fff4ef"/>
+  <path d="M260 420l110-190 110 190z" fill="#ffc542"/>
+  <circle cx="170" cy="185" r="52" fill="#ff7a59"/>
+  <rect x="330" y="80" width="170" height="26" rx="13" fill="#1b1a2e" fill-opacity=".85"/>
+</svg>

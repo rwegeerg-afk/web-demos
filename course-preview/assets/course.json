@@ -1,0 +1,427 @@
+{
+ "version": 1,
+ "generatedAt": "2026-10-28T09:04:17.741Z",
+ "title": "Interface Design Foundations",
+ "stats": {
+  "folders": 14,
+  "files": 46,
+  "bytes": 8053821645,
+  "types": {
+   "video": {
+    "count": 17,
+    "bytes": 7592738816
+   },
+   "pdf": {
+    "count": 12,
+    "bytes": 22437069
+   },
+   "design": {
+    "count": 6,
+    "bytes": 205520896
+   },
+   "archive": {
+    "count": 2,
+    "bytes": 232783872
+   },
+   "subtitle": {
+    "count": 7,
+    "bytes": 318464
+   },
+   "other": {
+    "count": 2,
+    "bytes": 22528
+   }
+  },
+  "modules": 6
+ },
+ "children": [
+  {
+   "kind": "folder",
+   "name": "01 Getting Started",
+   "files": 3,
+   "bytes": 92091187,
+   "children": [
+    {
+     "kind": "file",
+     "name": "00 Welcome and how to use this course.mp4",
+     "type": "video",
+     "bytes": 90177536
+    },
+    {
+     "kind": "file",
+     "name": "Course roadmap.pdf",
+     "type": "pdf",
+     "bytes": 1258291
+    },
+    {
+     "kind": "file",
+     "name": "Tools checklist.pdf",
+     "type": "pdf",
+     "bytes": 655360
+    }
+   ]
+  },
+  {
+   "kind": "folder",
+   "name": "02 Layout and Grid",
+   "files": 10,
+   "bytes": 1394066022,
+   "children": [
+    {
+     "kind": "folder",
+     "name": "Source files",
+     "files": 2,
+     "bytes": 40894464,
+     "children": [
+      {
+       "kind": "file",
+       "name": "layout-lab-final.fig",
+       "type": "design",
+       "bytes": 22020096
+      },
+      {
+       "kind": "file",
+       "name": "layout-lab-start.fig",
+       "type": "design",
+       "bytes": 18874368
+      }
+     ]
+    },
+    {
+     "kind": "folder",
+     "name": "Subtitles",
+     "files": 3,
+     "bytes": 134144,
+     "children": [
+      {
+       "kind": "file",
+       "name": "01 Grids that scale.srt",
+       "type": "subtitle",
+       "bytes": 43008
+      },
+      {
+       "kind": "file",
+       "name": "02 Spacing system.srt",
+       "type": "subtitle",
+       "bytes": 38912
+      },
+      {
+       "kind": "file",
+       "name": "03 Responsive layout lab.srt",
+       "type": "subtitle",
+       "bytes": 52224
+      }
+     ]
+    },
+    {
+     "kind": "folder",
+     "name": "Worksheets",
+     "files": 2,
+     "bytes": 3520102,
+     "children": [
+      {
+       "kind": "file",
+       "name": "Grid worksheet.pdf",
+       "type": "pdf",
+       "bytes": 2516582
+      },
+      {
+       "kind": "file",
+       "name": "Spacing cheatsheet.pdf",
+       "type": "pdf",
+       "bytes": 1003520
+      }
+     ]
+    },
+    {
+     "kind": "file",
+     "name": "01 Grids that scale.mp4",
+     "type": "video",
+     "bytes": 432013312
+    },
+    {
+     "kind": "file",
+     "name": "02 Spacing system.mp4",
+     "type": "video",
+     "bytes": 372244480
+    },
+    {
+     "kind": "file",
+     "name": "03 Responsive layout lab.mp4",
+     "type": "video",
+     "bytes": 545259520
+    }
+   ]
+  },
+  {
+   "kind": "folder",
+   "name": "03 Typography and Colour",
+   "files": 13,
+   "bytes": 1833727591,
+   "children": [
+    {
+     "kind": "folder",
+     "name": "Source files",
+     "files": 2,
+     "bytes": 47185920,
+     "children": [
+      {
+       "kind": "file",
+       "name": "palette-lab.fig",
+       "type": "design",
+       "bytes": 19922944
+      },
+      {
+       "kind": "file",
+       "name": "type-system.fig",
+       "type": "design",
+       "bytes": 27262976
+      }
+     ]
+    },
+    {
+     "kind": "folder",
+     "name": "Subtitles",
+     "files": 4,
+     "bytes": 184320,
+     "children": [
+      {
+       "kind": "file",
+       "name": "01 Type scale in practice.srt",
+       "type": "subtitle",
+       "bytes": 45056
+      },
+      {
+       "kind": "file",
+       "name": "02 Pairing typefaces.srt",
+       "type": "subtitle",
+       "bytes": 36864
+      },
+      {
+       "kind": "file",
+       "name": "03 Colour systems and contrast.srt",
+       "type": "subtitle",
+       "bytes": 49152
+      },
+      {
+       "kind": "file",
+       "name": "04 Accessible palettes lab.srt",
+       "type": "subtitle",
+       "bytes": 53248
+      }
+     ]
+    },
+    {
+     "kind": "folder",
+     "name": "Worksheets",
+     "files": 3,
+     "bytes": 5875303,
+     "children": [
+      {
+       "kind": "file",
+       "name": "Contrast checklist.pdf",
+       "type": "pdf",
+       "bytes": 737280
+      },
+      {
+       "kind": "file",
+       "name": "Palette workbook.pdf",
+       "type": "pdf",
+       "bytes": 3250586
+      },
+      {
+       "kind": "file",
+       "name": "Type scale calculator.pdf",
+       "type": "pdf",
+       "bytes": 1887437
+      }
+     ]
+    },
+    {
+     "kind": "file",
+     "name": "01 Type scale in practice.mp4",
+     "type": "video",
+     "bytes": 406847488
+    },
+    {
+     "kind": "file",
+     "name": "02 Pairing typefaces.mp4",
+     "type": "video",
+     "bytes": 357564416
+    },
+    {
+     "kind": "file",
+     "name": "03 Colour systems and contrast.mp4",
+     "type": "video",
+     "bytes": 489684992
+    },
+    {
+     "kind": "file",
+     "name": "04 Accessible palettes lab.mp4",
+     "type": "video",
+     "bytes": 526385152
+    }
+   ]
+  },
+  {
+   "kind": "folder",
+   "name": "04 Components",
+   "files": 9,
+   "bytes": 2456202854,
+   "children": [
+    {
+     "kind": "folder",
+     "name": "Source files",
+     "files": 3,
+     "bytes": 79710208,
+     "children": [
+      {
+       "kind": "file",
+       "name": "component-kit.fig",
+       "type": "design",
+       "bytes": 67108864
+      },
+      {
+       "kind": "file",
+       "name": "icons-24px.zip",
+       "type": "archive",
+       "bytes": 12582912
+      },
+      {
+       "kind": "file",
+       "name": "tokens.json",
+       "type": "other",
+       "bytes": 18432
+      }
+     ]
+    },
+    {
+     "kind": "folder",
+     "name": "Worksheets",
+     "files": 1,
+     "bytes": 1468006,
+     "children": [
+      {
+       "kind": "file",
+       "name": "Component audit template.pdf",
+       "type": "pdf",
+       "bytes": 1468006
+      }
+     ]
+    },
+    {
+     "kind": "file",
+     "name": "01 Buttons and forms.mp4",
+     "type": "video",
+     "bytes": 450887680
+    },
+    {
+     "kind": "file",
+     "name": "02 Navigation patterns.mp4",
+     "type": "video",
+     "bytes": 417333248
+    },
+    {
+     "kind": "file",
+     "name": "03 Cards, lists and tables.mp4",
+     "type": "video",
+     "bytes": 477102080
+    },
+    {
+     "kind": "file",
+     "name": "04 States and feedback.mp4",
+     "type": "video",
+     "bytes": 390070272
+    },
+    {
+     "kind": "file",
+     "name": "05 Building a component library.mp4",
+     "type": "video",
+     "bytes": 639631360
+    }
+   ]
+  },
+  {
+   "kind": "folder",
+   "name": "05 Prototyping and Handoff",
+   "files": 5,
+   "bytes": 1127428915,
+   "children": [
+    {
+     "kind": "file",
+     "name": "01 Interactive prototypes.mp4",
+     "type": "video",
+     "bytes": 424673280
+    },
+    {
+     "kind": "file",
+     "name": "02 Writing a handoff spec.mp4",
+     "type": "video",
+     "bytes": 346030080
+    },
+    {
+     "kind": "file",
+     "name": "03 Design review workflow.mp4",
+     "type": "video",
+     "bytes": 304087040
+    },
+    {
+     "kind": "file",
+     "name": "Handoff template.pdf",
+     "type": "pdf",
+     "bytes": 2306867
+    },
+    {
+     "kind": "file",
+     "name": "prototype-final.fig",
+     "type": "design",
+     "bytes": 50331648
+    }
+   ]
+  },
+  {
+   "kind": "folder",
+   "name": "06 Bonus",
+   "files": 5,
+   "bytes": 1149977396,
+   "children": [
+    {
+     "kind": "file",
+     "name": "Interview questions.pdf",
+     "type": "pdf",
+     "bytes": 1153434
+    },
+    {
+     "kind": "file",
+     "name": "Live Q&A recording.mp4",
+     "type": "video",
+     "bytes": 922746880
+    },
+    {
+     "kind": "file",
+     "name": "Portfolio case study guide.pdf",
+     "type": "pdf",
+     "bytes": 5872026
+    },
+    {
+     "kind": "file",
+     "name": "README.txt",
+     "type": "other",
+     "bytes": 4096
+    },
+    {
+     "kind": "file",
+     "name": "Stock mockups.zip",
+     "type": "archive",
+     "bytes": 220200960
+    }
+   ]
+  },
+  {
+   "kind": "file",
+   "name": "START HERE.pdf",
+   "type": "pdf",
+   "bytes": 327680
+  }
+ ]
+}
